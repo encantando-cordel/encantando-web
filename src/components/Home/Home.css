@@ -1,0 +1,39 @@
+.main {
+    background-image: url('../../images/FRAME DAS TELAS.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-size: 70%;
+}
+
+.persons-right {
+   float: right;
+   margin-right: 10%;
+   margin-top: 20%;
+}
+
+.persons-left {
+    float: left;
+    margin-left: 10%;
+    margin-top: 23%;
+ }
+
+.persons-right > img {
+    width: 530px;
+}
+
+.persons-left > img {
+    width: 592px;
+}
+
+@media only screen and (max-width: 600px) {
+    .main {
+        background-size: 100% 100%;
+    }
+} 
+@media only screen and (min-width: 600px) {
+    .main {
+        background-size: 100% 100%;
+    }
+} 
