@@ -24,11 +24,16 @@
     flex-wrap: wrap;
     flex-direction: column;
     align-self: center;
+    text-align: center;
 }
 
 .menu > div > img {
     width: 300px;
     margin-bottom: 5%;
+}
+
+.menu > div > h1 {
+    font-size: 6rem;
 }
 
 .title > img {
@@ -37,12 +42,16 @@
 }
 
 .persons > img {
-    width: 500px;
+    width: 600px;
+    height: 500px;
 }
 
-h2 {
+h1 {
     align-self: center;
+    font-family: "cordelFont";
+    font-size: 9rem;
 }
+
 @media only screen and (max-width: 600px) {
     .main {
         background-size: 100% 100%;

@@ -17,19 +17,22 @@ export default class Home extends Component {
                     <img src= { PersonsLeft } alt=""/>
                     <div className = "menu">
                         <div>
-                            <img className = "init-button" src= { InitButton } alt=""/>
+                            <h1>Iniciar</h1>
                         </div>
                         <div>
-                            <img className = "credits-button"  src= { CreditsButton } alt=""/>
+                            <h1>Créditos</h1>
                         </div>
                     </div>
                     <img src= { PersonsRight } alt=""/>      
                 </div>  
                 <div className = "title">
+                    <h1>Cordel</h1>
+                </div>
+                <div className = "title">
                     <div>
                         <img src= { Moon } alt=""/>
                     </div>
-                    <h2>ENCANTANDO CORDEL</h2>
+                    <h1>ENCANTANDO</h1>
                     <div>
                         <img src= { Star } alt=""/>
                     </div>
