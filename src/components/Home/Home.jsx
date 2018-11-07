@@ -12,10 +12,10 @@ export default class Home extends Component {
     render() {
         return (
             <div className = "main">
-                <img id = "moon" src= { Moon } alt=""/>
-                <img id = "star-animation" src= { StarAnimation } alt=""/>
-                <img id = "star" src= { Star } alt=""/>
-                <img id = "last-star" src= { Star } alt=""/>
+                <img id = "moon" src= { Moon } alt = ""/>
+                <img id = "star-animation" src= { StarAnimation } alt = ""/>
+                <img id = "star" src= { Star } alt = ""/>
+                <img id = "last-star" src= { Star } alt = ""/>
                 <div className = "title">
                     <div>
                         <h1>ENCANTANDO</h1>
@@ -24,7 +24,7 @@ export default class Home extends Component {
                         <h1>CORDEL</h1>
                     </div>
                 </div>
-                <img  id = "personsLeft"  src= { Dancarinos } alt=""/>
+                <img  id = "personsLeft"  src = { Dancarinos } alt = ""/>
                 <div className = "menu">
                     <div>
                         <h2>Iniciar</h2>
@@ -33,7 +33,7 @@ export default class Home extends Component {
                         <h2>Créditos</h2>
                     </div>
                 </div>
-                <img  id = "personsRight"  src= { PersonsRight } alt=""/>
+                <img  id = "personsRight"  src = { PersonsRight } alt = ""/>
             </div>
         )
     }
