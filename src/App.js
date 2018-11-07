@@ -8,6 +8,7 @@ import { BrowserRouter,Switch,Route, Redirect }  from 'react-router-dom';
 import './App.css';
 
 import  Home  from './components/Home/Home';
+import Editor from './components/Editor/Editor'
 
 class App extends Component {
   render() {
@@ -15,8 +16,9 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path = "/home" exact component = {Home} />
-            <Redirect from= "" to = "/home" />
+            <Route path="/home" exact component={Home} />
+            <Route path="/novo" exact component={Editor}/>
+            <Redirect from="" to="/home" />
           </Switch>
         </BrowserRouter>
       </div>

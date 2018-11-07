@@ -27,7 +27,9 @@ export default class Home extends Component {
                 <img  id = "peopleLeft"  src = { Dancers } alt = ""/>
                 <div className = "menu">
                     <div>
+                        <a href="/novo"> 
                         <h2>Iniciar</h2>
+                        </a>
                     </div>
                     <div>
                         <h2>Créditos</h2>
