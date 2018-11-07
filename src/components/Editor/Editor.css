@@ -1,0 +1,15 @@
+.text-container {
+    padding: 120px;
+    height: 100%;
+    position: relative;
+}
+textarea {
+    background: transparent;
+    color: black;
+    outline: none;
+    border: 0 none;
+    resize: none;
+    width:100%;
+    height: 600px;
+    font-size:30px;
+}
