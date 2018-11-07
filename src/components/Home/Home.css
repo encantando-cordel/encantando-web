@@ -9,7 +9,7 @@
     flex-direction: column;
 }
 
-.persons {
+.people {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -44,14 +44,14 @@ h2 {
     cursor: pointer;
 }
 
-#personsRight{
+#peopleRight{
     height: 65vh;
     position: absolute;
     bottom: 0;
     right: 0;
 }
 
-#personsLeft {
+#peopleLeft {
     height: 62vh;
     margin-bottom: 7vh;
     position: absolute;
@@ -98,11 +98,11 @@ h2 {
         margin-top: 25%;
     }
 
-    #personsLeft{
+    #peopleLeft{
         height: 25vh;
     }
 
-    #personsRight{
+    #peopleRight{
         height: 35vh;
         width: 40vw;
     }
@@ -136,11 +136,11 @@ h2 {
         margin-top: 15%;
     }
 
-    #personsLeft{
+    #peopleLeft{
         height: 25vh;
     }
 
-    #personsRight{
+    #peopleRight{
         height: 35vh;
         width: 40vw;
     }
@@ -192,11 +192,11 @@ h2 {
         font-size: 9vh;
     }
 
-    #personsLeft {
+    #peopleLeft {
         height: 32vh;
     }
 
-    #personsRight {
+    #peopleRight {
         height: 40vh;
     }
 } 
@@ -219,7 +219,7 @@ h2 {
         margin-top: 10%;    
     }
 
-    #personsRight {
+    #peopleRight {
         width: 37vw;
     }
    
@@ -227,11 +227,11 @@ h2 {
 
 
 @media only screen and (min-width: 1200px) {
-    #personsLeft {
+    #peopleLeft {
         height: 40vh;
     }
 
-    #personsRight {
+    #peopleRight {
         height: 50vh;
     }
 
@@ -245,11 +245,11 @@ h2 {
 }
 
 @media only screen and (min-width: 1400px) {
-    #personsLeft {
+    #peopleLeft {
         height: 50vh;
     }
 
-    #personsRight {
+    #peopleRight {
         height: 60vh;
     }
 

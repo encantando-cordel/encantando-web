@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './Home.css';
 
-import PersonsRight  from '../../images/personsRight.png';
+import PeopleRight  from '../../images/peopleRight.png';
 import StarAnimation from '../../images/star-animation.gif';
 import Star from '../../images/star.png';
-import Dancers from '../../images/dancarinos.gif';
+import Dancers from '../../images/dancers.gif';
 import Moon from '../../images/moon-animation.gif';
 
 export default class Home extends Component {
@@ -24,7 +24,7 @@ export default class Home extends Component {
                         <h1>CORDEL</h1>
                     </div>
                 </div>
-                <img  id = "personsLeft"  src = { Dancers } alt = ""/>
+                <img  id = "peopleLeft"  src = { Dancers } alt = ""/>
                 <div className = "menu">
                     <div>
                         <h2>Iniciar</h2>
@@ -33,7 +33,7 @@ export default class Home extends Component {
                         <h2>Créditos</h2>
                     </div>
                 </div>
-                <img  id = "personsRight"  src = { PersonsRight } alt = ""/>
+                <img  id = "peopleRight"  src = { PeopleRight } alt = ""/>
             </div>
         )
     }
