@@ -4,7 +4,7 @@ import './Home.css';
 import PersonsRight  from '../../images/personsRight.png';
 import StarAnimation from '../../images/star-animation.gif';
 import Star from '../../images/star.png';
-import Dancarinos from '../../images/dancarinos.gif';
+import Dancers from '../../images/dancarinos.gif';
 import Moon from '../../images/moon-animation.gif';
 
 export default class Home extends Component {
@@ -24,7 +24,7 @@ export default class Home extends Component {
                         <h1>CORDEL</h1>
                     </div>
                 </div>
-                <img  id = "personsLeft"  src = { Dancarinos } alt = ""/>
+                <img  id = "personsLeft"  src = { Dancers } alt = ""/>
                 <div className = "menu">
                     <div>
                         <h2>Iniciar</h2>
