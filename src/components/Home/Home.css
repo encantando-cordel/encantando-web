@@ -4,9 +4,9 @@
     background-size: cover;
     background-position: center;
     min-height: 100vh;
-    background-size: 70%;
+    background-size: 100% 100%;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 .persons {
@@ -16,49 +16,260 @@
 }
 
 .title {
-    display: flex;
-    justify-content: space-around;
+    align-self: center;
+    flex-direction: column;
+    margin-top: 5%;
 }
 
 .menu {
-    flex-wrap: wrap;
-    flex-direction: column;
+    display: flex;
     align-self: center;
-    text-align: center;
+    flex-direction: column;
+    margin-top: 10%;
+    z-index: 0;
 }
 
-.menu > div > img {
-    width: 300px;
-    margin-bottom: 5%;
-}
-
-.menu > div > h1 {
-    font-size: 6rem;
-}
-
-.title > img {
-    width: 200px;
-    height: 200px;
-}
-
-.persons > img {
-    width: 600px;
-    height: 500px;
-}
 
 h1 {
-    align-self: center;
     font-family: "cordelFont";
-    font-size: 9rem;
+    font-size: 13vh;
+    text-align: center;
+    cursor: pointer;
 }
 
+h2 {
+    font-family: "cordelFont";
+    font-size: 10vh;
+    text-align: center;
+    cursor: pointer;
+}
+
+#personsRight{
+    height: 65vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#personsLeft {
+    height: 62vh;
+    margin-bottom: 7vh;
+    position: absolute;
+    bottom: 0;
+    z-index: 4;
+}
+
+#moon {
+    position: absolute;
+    top: 22%;
+    left: 22%;
+    height: 15vh;
+}
+
+#star-animation {
+    position: absolute;
+    top: 12%;
+    right: 22%;
+    height: 15vh;
+}
+
+#star{
+    position: absolute;
+    top: 30%;
+    right: 33%;
+    height: 8vh;
+}
+
+#last-star{
+    position: absolute;
+    top: 42%;
+    left: 43%;
+    height: 6vh;
+}
+
+
+
 @media only screen and (max-width: 600px) {
-    .main {
-        background-size: 100% 100%;
+    h1 {
+        font-size: 6vh;
+    }
+
+    .title{
+        margin-top: 25%;
+    }
+
+    #personsLeft{
+        height: 25vh;
+    }
+
+    #personsRight{
+        height: 35vh;
+        width: 40vw;
+    }
+
+    h2{
+        font-size: 4vh;
+    }
+
+    .menu {
+        margin-top: 45%;
+    }
+
+    #moon {
+        left: 7%;
+        height: 10vh;
+    }
+
+    #star-animation {
+        top: 22%;
+        right: 11%;
+        height: 7vh;
     }
 } 
+
 @media only screen and (min-width: 600px) {
-    .main {
-        background-size: 100% 100%;
-    }   
+    h1 {
+        font-size: 7vh;
+    }
+
+    .title{
+        margin-top: 15%;
+    }
+
+    #personsLeft{
+        height: 25vh;
+    }
+
+    #personsRight{
+        height: 35vh;
+        width: 40vw;
+    }
+    h2{
+        font-size: 4vh;
+    }
+
+    .menu {
+        margin-top: 45%;
+    }
+
+    #moon {
+        left: 9%;
+        height: 10vh;
+    }
+
+    #star-animation {
+        top: 22%;
+        right: 11%;
+        height: 7vh;
+    }
 } 
+
+
+@media only screen and (min-width: 768px) {
+    .menu {
+        margin-top: 23%;
+    }
+
+    #moon {
+        height: 10vh;
+        top: 22%;
+    }
+
+    #star-animation {
+        top: 23%;
+        right: 17%;
+    }
+
+    .title {
+        margin-top: 13%;    
+    }
+
+    #star{
+        top: 35%;
+    }
+
+    h1 {
+        font-size: 9vh;
+    }
+
+    #personsLeft {
+        height: 32vh;
+    }
+
+    #personsRight {
+        height: 40vh;
+    }
+} 
+
+
+@media only screen and (min-width: 992px) {
+    .menu {
+        margin-top: 22%;
+    }
+
+    #moon {
+        left: 20%;
+    }
+
+    #star-animation {
+        right: 25%;
+    }
+
+    .title {
+        margin-top: 10%;    
+    }
+
+    #personsRight {
+        width: 37vw;
+    }
+   
+} 
+
+
+@media only screen and (min-width: 1200px) {
+    #personsLeft {
+        height: 40vh;
+    }
+
+    #personsRight {
+        height: 50vh;
+    }
+
+    .title{
+        margin-top: 7%;
+    }
+
+    .menu {
+        margin-top: 20%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    #personsLeft {
+        height: 50vh;
+    }
+
+    #personsRight {
+        height: 60vh;
+    }
+
+    .title{
+        margin-top: 7%;
+    }
+
+    .menu {
+        margin-top: 7%;
+    }
+
+    h2{
+        font-size: 6vh;
+    }
+
+    h1 {
+        font-size: 12vh;
+    }
+
+    #star {
+        top: 38%;
+    }
+}
