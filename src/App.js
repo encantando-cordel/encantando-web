@@ -10,6 +10,7 @@ import './App.css';
 import  Home  from './components/Home/Home';
 import Editor from './components/Editor/Editor'
 import ChooseCharacter from './components/ChooseCharacter/ChooseCharacter';
+import SextilhaInfo from '/components/SextilhaInfo/SextilhaInfo'
 
 class App extends Component {
   render() {
@@ -19,9 +20,11 @@ class App extends Component {
           <Switch>
             <Route path="/home" exact component={Home} />
             <Route path="/novo" exact component={Editor}/>
+            <Route path="/sextilha-info" exact component={SextilhaInfo}/>
             <Route path = "/home" exact component = { Home }/>
             <Route path = "/character" exact component = { ChooseCharacter }/>
             <Redirect from= "" to = "/home" />
+
           </Switch>
         </BrowserRouter>
       </div>
