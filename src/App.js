@@ -11,7 +11,7 @@ import Home  from './components/Home/Home';
 import Editor from './components/Editor/Editor'
 import ChooseCharacter from './components/ChooseCharacter/ChooseCharacter';
 import CordelHistory from './components/CordelHistory/CordelHistory';
-import SextilhaInfo from '/components/SextilhaInfo/SextilhaInfo';
+import SextilhaInfo from './components/SextilhaInfo/SextilhaInfo';
 
 class App extends Component {
   render() {
