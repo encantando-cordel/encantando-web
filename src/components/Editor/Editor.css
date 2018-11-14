@@ -13,3 +13,122 @@ textarea {
     height: 600px;
     font-size:30px;
 }
+
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1{
+	text-align: center;
+}
+
+.menubottom{
+   border: 0px solid black;
+   text-align: center;   
+   color: #ffffff;
+}
+
+.cores {
+   border: 1px solid black;
+   text-align: center;
+   color: #4c4637; 
+}
+
+.bkbranco{
+	background-color: #ffffff;
+}
+
+.bkverde{
+	background-color: #0c741d;
+	color: #ffffff;
+}
+
+.bkmarron{
+	background-color: #663212;
+	color: #ffffff;
+}
+
+.bkazul{
+	background-color: #48cbe2;
+	color: #ffffff;
+}
+
+
+table{
+	width: 100%;
+}
+
+/************ Main ***************/
+.column {
+    float: left;
+    width: 20%;
+    background-color: #efd09b; 
+    height: 60%;  
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+.columnCenter {	 
+    float: left;
+    width: 60%;
+    height: 60%;
+    padding-left: 2%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+.background1{
+	
+	background-size: 100% 100%;
+	height: 80%;
+	background-repeat: no-repeat;	
+}
+
+.background2{
+	background-image: url("../../images/LivroAzul.png");
+	background-size: 100% 100%;
+	height: 80%;
+	background-repeat: no-repeat;	
+}
+
+.background3{
+	background-image: url("../../images/LivroMarron.png");
+	background-size: 100% 100%;
+	height: 80%;
+	background-repeat: no-repeat;	
+}
+
+.background4{
+	background-image: url("../../images/LivroVerde.png");
+	background-size: 100% 100%;
+	height: 80%;
+	background-repeat: no-repeat;	
+}
+
+.editorxilografia{
+	height: 500px;
+}
+
+.xilografias{
+	overflow-y : scroll;
+	height: 70%;
+	margin-left: 10%;
+}
+
+.bottom{
+	background-color: #4c4637; 
+	padding: 1%;
+}
