@@ -1,0 +1,39 @@
+.history-box {
+    margin-left: 15%;
+    margin-top: 6%;
+}
+
+.history-box > h1 {
+    font-size:  9vh;
+    text-align: initial;
+}
+
+.fish-container {
+    float: right;
+    margin-right: 15%;
+    margin-top: 5%;
+}
+
+.frame-container {
+    float: left;
+}
+
+#SeaWeed {
+    display: block;
+}
+
+.arrow-buttons-container {
+    position: absolute;
+    bottom: 16%;
+    left: 18%;
+    
+}
+
+.arrow-buttons-container > img {
+    /* margin-right: 10%; */
+}
+
+#inverse-arrow {
+    transform: scaleX(-1);
+    margin-left: 20vw;
+}
