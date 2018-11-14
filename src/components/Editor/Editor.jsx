@@ -14,31 +14,19 @@ export default class Editor extends Component {
 	
 	constructor(props){
 		super(props);
-		{/* this.state = { color: 'red'}; */}
 		this.state = LivroBranco;
-		
 		this.handleClick = this.handleClick.bind(this);
 	}
 			
 	handleClick() {
-		console.log('hello world');
-		{/* this.setState({ color: 'blue' }); */}
-		console.log(this.state);
 		this.state = LivroVerde;
-		console.log(this.state);
 	}
 
 	
     render() {
-		console.log('rendering');
 		var style = this.state;
-		/*{
-			backgroundColor: this.state.color 
-		  
-		};*/
 
 		if (this.props.withsemi) {
-			/* style.backgroundColor += ";"; */
 			style.backgroundImage += ";";
 		}
 		
@@ -50,8 +38,17 @@ export default class Editor extends Component {
 						<br/>
 						<table className="cores">
 							<tbody>
-								<tr><th colSpan="4">Selecione a cor de fundo.</th></tr>
-								<tr className="cores"><td className="bkbranco"><a onClick={this.handleClick}>Branco</a></td><td className="bkmarron">Marron</td><td className="bkverde">Verde</td><td className="bkazul">Azul</td></tr>
+								<tr>
+                                    <th colSpan="4">Selecione a cor de fundo.</th>
+                                </tr>
+								<tr className="cores">
+                                    <td className="bkbranco">
+                                        <a onClick={this.handleClick}>Branco</a>
+                                    </td>
+                                    <td className="bkmarron">Marron</td>
+                                    <td className="bkverde">Verde</td>
+                                    <td className="bkazul">Azul</td>
+                                </tr>
 							</tbody>
 						</table>
 						<br/>
@@ -72,7 +69,6 @@ export default class Editor extends Component {
 									<p>aa</p>
 								</div>
 								<div className="editortexto">
-								
 								</div>
 							</div>
 					</div>			   
@@ -80,7 +76,12 @@ export default class Editor extends Component {
 			   <div className="bottom">
 					<table className="menubottom">	
 						<tbody>
-							<tr><td>Voltar</td><td>Exemplos</td><td>Ajuda</td><td>Concluir</td></tr>
+							<tr>
+                                <td>Voltar</td>
+                                <td>Exemplos</td>
+                                <td>Ajuda</td>
+                                <td>Concluir</td>
+                            </tr>
 						</tbody>
 					</table>
 			   </div>
