@@ -34,6 +34,7 @@ export default class Editor extends Component {
 			<div>
 				<div className="row">
 					{/* Menu esquerdo */}
+					
 					<div className="column">
 						<br/>
 						<table className="cores">
@@ -60,6 +61,7 @@ export default class Editor extends Component {
 								<img id = "Fish"  src = { Fish }  width="150" height="100"/>
 							</div>				
 					</div>	
+					
 					{/* Editor */}
 					<div className="columnCenter">
 						<br/>
