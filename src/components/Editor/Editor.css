@@ -22,6 +22,10 @@ textarea {
     font-family: "cordelFont";
 }
 
+a {
+    cursor: pointer;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -50,7 +54,7 @@ body {
 	color: #ffffff;
 }
 
-.bkmarron{
+.bkmarrom{
 	background-color: #663212;
 	color: #ffffff;
 }
@@ -93,7 +97,7 @@ table{
 }
 
 .brown-background{
-	background-image: url("../../images/LivroMarron.png");
+	background-image: url("../../images/LivroMarrom.png");
 	background-size: 100% 100%;
 	height: 80%;
 	background-repeat: no-repeat;	
