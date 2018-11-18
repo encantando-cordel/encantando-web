@@ -13,6 +13,15 @@ textarea {
     font-size:25px;
 }
 
+.cordel-title {
+    background: transparent;
+    color: black;
+    outline: none;
+    border: 0 none;
+    font-size:25px;
+    font-family: "cordelFont";
+}
+
 body {
   margin: 0;
   padding: 0;

@@ -65,7 +65,7 @@ export default class Editor extends Component {
 					{/* Editor */}
 					<div className="col-9">
 						<br/>
-						<input class="cordel-title" type="text" placeholder="Título do seu cordel"/>
+						<input class="cordel-title" type="text" placeholder="Título do seu cordel" size="80"/>
 							<div className="background1" style={ {backgroundImage: 'url(' + style + ')'}} >
 								<div className="text-container">
 									<textarea></textarea>
