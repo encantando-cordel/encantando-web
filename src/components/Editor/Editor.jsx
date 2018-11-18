@@ -40,33 +40,35 @@ export default class Editor extends Component {
 						<table className="cores">
 							<tbody>
 								<tr>
-                                    <th colSpan="4">Selecione a cor de fundo.</th>
+                                    <th colSpan="4">Selecione a cor de fundo</th>
                                 </tr>
 								<tr className="cores">
                                     <td className="bkbranco">
                                         <a onClick={this.handleClick}>Branco</a>
                                     </td>
                                     <td className="bkmarron">Marron</td>
+								</tr>
+								<tr className="cores">
                                     <td className="bkverde">Verde</td>
                                     <td className="bkazul">Azul</td>
                                 </tr>
 							</tbody>
 						</table>
 						<br/>
-						<h2>Xilogrfias</h2>
+						<h5 class="text-center">Adicione xilogravuras</h5>
 							<div className="xilografias">
-								<img id = "PeopleLeft"  src = { PeopleLeft } width="150" height="150"/>
-								<img id = "PeopleRight"  src = { PeopleRight }  width="150" height="150"/>
-								<img id = "Star"  src = { Star }  width="150" height="100"/>
-								<img id = "Fish"  src = { Fish }  width="150" height="100"/>
+								<img id = "PeopleLeft"  src = { PeopleLeft } width="50" height="50"/>
+								<img id = "PeopleRight"  src = { PeopleRight }  width="50" height="50"/>
+								<img id = "Star"  src = { Star }  width="50" height="50"/>
+								<img id = "Fish"  src = { Fish }  width="50" height="50"/>
 							</div>				
 					</div>	
 					
 					{/* Editor */}
 					<div className="col-9">
 						<br/>
-						<input class="cordel-title" type="text" placeholder="Título do seu cordel" size="80"/>
-							<div className="background1" style={ {backgroundImage: 'url(' + style + ')'}} >
+						<input class="cordel-title text-center" type="text" placeholder="Título do seu cordel" size="80"/>
+							<div className="white-background" style={ {backgroundImage: 'url(' + style + ')'}} >
 								<div className="text-container">
 									<textarea></textarea>
 								</div>

@@ -79,36 +79,31 @@ table{
     }
 }
 
-.background1{
-	
+.white-background{
 	background-size: 100% 100%;
 	height: 80%;
 	background-repeat: no-repeat;	
 }
 
-.background2{
+.blue-background{
 	background-image: url("../../images/LivroAzul.png");
 	background-size: 100% 100%;
 	height: 80%;
 	background-repeat: no-repeat;	
 }
 
-.background3{
+.brown-background{
 	background-image: url("../../images/LivroMarron.png");
 	background-size: 100% 100%;
 	height: 80%;
 	background-repeat: no-repeat;	
 }
 
-.background4{
+.green-background{
 	background-image: url("../../images/LivroVerde.png");
 	background-size: 100% 100%;
 	height: 80%;
 	background-repeat: no-repeat;	
-}
-
-.editorxilografia{
-	height: 500px;
 }
 
 .xilografias{
