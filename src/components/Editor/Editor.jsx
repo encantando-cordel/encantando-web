@@ -35,7 +35,7 @@ export default class Editor extends Component {
 				<div className="row">
 					{/* Menu esquerdo */}
 					
-					<div className="column">
+					<div className="col-3">
 						<br/>
 						<table className="cores">
 							<tbody>
@@ -63,12 +63,12 @@ export default class Editor extends Component {
 					</div>	
 					
 					{/* Editor */}
-					<div className="columnCenter">
+					<div className="col-9">
 						<br/>
-						<h2>Título do seu Cordel</h2>	
+						<input class="cordel-title" type="text" placeholder="Título do seu cordel"/>
 							<div className="background1" style={ {backgroundImage: 'url(' + style + ')'}} >
-								<div className="editorxilografia">
-									<p>aa</p>
+								<div className="text-container">
+									<textarea></textarea>
 								</div>
 								<div className="editortexto">
 								</div>

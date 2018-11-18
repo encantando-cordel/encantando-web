@@ -1,7 +1,6 @@
 .text-container {
-    padding: 120px;
-    height: 100%;
-    position: relative;
+    height: 500px;
+    padding: 60px 140px 0px 200px;
 }
 textarea {
     background: transparent;
@@ -10,8 +9,8 @@ textarea {
     border: 0 none;
     resize: none;
     width:100%;
-    height: 600px;
-    font-size:30px;
+    height: 300px;
+    font-size:25px;
 }
 
 body {
@@ -19,10 +18,6 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1{
-	text-align: center;
 }
 
 .menubottom{
@@ -62,21 +57,6 @@ table{
 }
 
 /************ Main ***************/
-.column {
-    float: left;
-    width: 20%;
-    background-color: #efd09b; 
-    height: 60%;  
-	padding-left: 2%;
-	padding-right: 2%;
-}
-
-.columnCenter {	 
-    float: left;
-    width: 60%;
-    height: 60%;
-    padding-left: 2%;
-}
 
 .row:after {
     content: "";
