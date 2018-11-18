@@ -7,22 +7,46 @@ import Star from '../../images/star.png';
 import Fish from '../../images/fish.gif';
 import LivroBranco from '../../images/LivroBranco.png';
 import LivroAzul from '../../images/LivroAzul.png';
-import LivroMarron from '../../images/LivroMarron.png';
+import LivroMarrom from '../../images/LivroMarrom.png';
 import LivroVerde from '../../images/LivroVerde.png';
 
 export default class Editor extends Component {
 	
 	constructor(props){
 		super(props);
-		this.state = LivroBranco;
-		this.handleClick = this.handleClick.bind(this);
+		this.state = {
+			color: LivroBranco
+		};
+		this.handleBackgroundColorChange = this.handleBackgroundColorChange.bind(this);
+		this.backgroundAvailableColors = [
+			{name: 'Branco', href: LivroBranco, class: 'bkbranco'}, 
+			{name: 'Azul', href: LivroAzul, class: 'bkazul'}, 
+			{name: 'Verde', href: LivroVerde, class: 'bkverde'}, 
+			{name: 'Marrom', href: LivroMarrom, class: 'bkmarrom'}
+		]
 	}
 			
-	handleClick() {
-		this.state = LivroVerde;
+	handleBackgroundColorChange(color) {
+		this.setState({color: color})
 	}
 
-	
+	createColors = () => {
+		let table = []
+		let children = []
+		for (let i = 0; i < this.backgroundAvailableColors.length; i++) {
+			let color = this.backgroundAvailableColors[i]
+			children.push(
+			<td className={color.class}>
+				<a onClick={(e) => this.handleBackgroundColorChange(color.href, e)}>
+				{color.name}
+				</a>
+			</td>)
+		}
+		table.push(<tr>{children}</tr>)
+		return table
+	}
+
+
     render() {
 		var style = this.state;
 
@@ -32,45 +56,33 @@ export default class Editor extends Component {
 		
         return (
 			<div>
-				<div className="row">
-					{/* Menu esquerdo */}
-					
-					<div className="column">
+				<div className="row">					
+					<div className="col-3 left-menu">
 						<br/>
 						<table className="cores">
 							<tbody>
 								<tr>
-                                    <th colSpan="4">Selecione a cor de fundo.</th>
+                                    <th colSpan="4">Selecione a cor de fundo</th>
                                 </tr>
-								<tr className="cores">
-                                    <td className="bkbranco">
-                                        <a onClick={this.handleClick}>Branco</a>
-                                    </td>
-                                    <td className="bkmarron">Marron</td>
-                                    <td className="bkverde">Verde</td>
-                                    <td className="bkazul">Azul</td>
-                                </tr>
+								{ this.createColors() }
 							</tbody>
 						</table>
 						<br/>
-						<h2>Xilogrfias</h2>
+						<h5 className="text-center">Adicione xilogravuras</h5>
 							<div className="xilografias">
-								<img id = "PeopleLeft"  src = { PeopleLeft } width="150" height="150"/>
-								<img id = "PeopleRight"  src = { PeopleRight }  width="150" height="150"/>
-								<img id = "Star"  src = { Star }  width="150" height="100"/>
-								<img id = "Fish"  src = { Fish }  width="150" height="100"/>
+								<img id = "PeopleLeft"  src = { PeopleLeft } width="50" height="50"/>
+								<img id = "PeopleRight"  src = { PeopleRight }  width="50" height="50"/>
+								<img id = "Star"  src = { Star }  width="50" height="50"/>
+								<img id = "Fish"  src = { Fish }  width="50" height="50"/>
 							</div>				
 					</div>	
 					
-					{/* Editor */}
-					<div className="columnCenter">
+					<div className="col-9 editor">
 						<br/>
-						<h2>Título do seu Cordel</h2>	
-							<div className="background1" style={ {backgroundImage: 'url(' + style + ')'}} >
-								<div className="editorxilografia">
-									<p>aa</p>
-								</div>
-								<div className="editortexto">
+						<input className="cordel-title text-center" type="text" placeholder="Título do seu cordel" size="80"/>
+							<div className="white-background" style={ {backgroundImage: 'url(' + this.state.color + ')'}} >
+								<div className="text-container">
+									<textarea></textarea>
 								</div>
 							</div>
 					</div>			   
