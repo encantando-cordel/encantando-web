@@ -4,13 +4,11 @@
 }
 
 .history-box > h1 {
-    font-size:  9vh;
     text-align: initial;
 }
 
 .fish-container {
     float: right;
-    margin-right: 15%;
     margin-top: 5%;
 }
 
@@ -24,8 +22,6 @@
 
 .arrow-buttons-container {
     position: absolute;
-    bottom: 16%;
-    left: 18%;
     
 }
 
@@ -36,4 +32,69 @@
 #inverse-arrow {
     transform: scaleX(-1);
     margin-left: 20vw;
+}
+
+
+@media only screen and (min-width: 992px) {
+    
+    .history-box {
+        margin-top: 12%;
+    }
+
+    .history-box > h1 {
+        font-size: 5vh;
+    }
+
+    .frame-container {
+        width: 45%;
+    }
+
+    .frame-container > img {
+        width: 100%;
+    }
+
+    .arrow-buttons-container > img {
+        width: 15%;
+    }
+
+    .fish-container > img{
+        width: 40%;
+    }
+
+    .SeaWeed > img{
+        width: 28%;
+    }
+
+    .fish-container {
+        width: 55%;
+    }
+} 
+
+
+@media only screen and (min-width: 1200px) {
+    .history-box {
+        margin-top: 7%;
+    }
+
+    .frame-container {
+        width: 38%;
+        margin-bottom: 40px;
+    }
+
+    .history-box > h1 {
+        font-size: 4.5rem;
+    }
+
+    .frame-container {
+        width: 45%;
+    }
+    .frame-container > img {
+        height: 400px;
+    }
+
+    .arrow-buttons-container > img {
+        width: 15%;
+        
+    }
+
 }
