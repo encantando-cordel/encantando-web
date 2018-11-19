@@ -27,7 +27,7 @@ export default class Home extends Component {
                 <img  id = "peopleLeft"  src = { Dancers } alt = ""/>
                 <div className = "menu">
                     <div>
-                        <h2 onClick = {() => this.props.history.push('/novo')}>Iniciar</h2>
+                        <h2 onClick = {() => this.props.history.push('/character')}>Iniciar</h2>
                     </div>
                     <div>
                         <h2>Créditos</h2>
