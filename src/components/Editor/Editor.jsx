@@ -5,100 +5,155 @@ import PeopleRight  from '../../images/peopleRight.png';
 import PeopleLeft from '../../images/peopleLeft.png';
 import Star from '../../images/star.png';
 import Fish from '../../images/fish.gif';
-import LivroBranco from '../../images/LivroBranco.png';
-import LivroAzul from '../../images/LivroAzul.png';
-import LivroMarrom from '../../images/LivroMarrom.png';
-import LivroVerde from '../../images/LivroVerde.png';
+import Livro from '../../images/book.png';
+
+import btnVoltar from '../../images/progress-button.png';
+import btnExemplos from '../../images/progress-button.png';
+import btnAjuda from '../../images/progress-button.png';
+import btnConcluir from '../../images/botao_concluir_editor.png';
 
 export default class Editor extends Component {
 	
 	constructor(props){
 		super(props);
-		this.state = {
-			color: LivroBranco
-		};
-		this.handleBackgroundColorChange = this.handleBackgroundColorChange.bind(this);
-		this.backgroundAvailableColors = [
-			{name: 'Branco', href: LivroBranco, class: 'bkbranco'}, 
-			{name: 'Azul', href: LivroAzul, class: 'bkazul'}, 
-			{name: 'Verde', href: LivroVerde, class: 'bkverde'}, 
-			{name: 'Marrom', href: LivroMarrom, class: 'bkmarrom'}
-		]
+		this.state = { color: 'white'}; 
+		
+		this.bkBranco = this.bkBranco.bind(this);
+		this.bkMarron = this.bkMarron.bind(this);
+		this.bkAmarelo = this.bkAmarelo.bind(this);
+		this.bkRosa = this.bkRosa.bind(this);
 	}
 			
-	handleBackgroundColorChange(color) {
-		this.setState({color: color})
+	bkBranco() {
+		this.setState({ color: 'white' });	
+		console.log(this.state);
+	}
+	
+	bkMarron(){
+		this.setState({ color: '#c69c6d' });	
+		console.log(this.state);
+	}
+	
+	bkAmarelo(){
+		this.setState({ color: '#fff899' });	
+		console.log(this.state);
+	}
+	
+	bkRosa(){
+		this.setState({ color: '#f79779' });	
+		console.log(this.state);
 	}
 
-	createColors = () => {
-		let table = []
-		let children = []
-		for (let i = 0; i < this.backgroundAvailableColors.length; i++) {
-			let color = this.backgroundAvailableColors[i]
-			children.push(
-			<td className={color.class}>
-				<a onClick={(e) => this.handleBackgroundColorChange(color.href, e)}>
-				{color.name}
-				</a>
-			</td>)
-		}
-		table.push(<tr>{children}</tr>)
-		return table
-	}
-
-
+	
     render() {
-		var style = this.state;
+		console.log('rendering');
+		var style = {
+			backgroundColor: this.state.color		  
+		};
 
 		if (this.props.withsemi) {
-			style.backgroundImage += ";";
+			style.backgroundColor += ";"; 
 		}
 		
         return (
-			<div>
-				<div className="row">					
-					<div className="col-3 left-menu">
+			<div className="main">
+			
+				{/* Menu Superior*/}
+				<div className="menuTop">
+				
+					{/* Menu para selecionar as cores de background*/}
+					
+					<div >
+						<h2>COR DO FUNDO</h2>
+						{/* Tabela com as cores de background */}
+						<div className="menuBackground">
+							<table>
+								<tbody>									
+									<tr>
+										<td className="bkbranco" onClick={this.bkBranco}></td>
+										<td className="bkmarron" onClick={this.bkMarron}></td>
+										<td className="bkamarelo" onClick={this.bkAmarelo}></td>
+										<td className="bkrosa" onClick={this.bkRosa}></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<h2>CRIANDO SEU CORDEL</h2>	
+					
+					{/* Botão Ajudar */}
+					<button className="btnAjuda" onClick=""><img src={ btnAjuda } alt="Ajuda" /></button>
+					{/* Remover esse trecho após validação
+					<a href="/ajudar"  title="Ajudar">
+						<img src={ btnVoltar } alt="Ajudar" className="btnAjuda"/>
+					</a>
+					*/}
+				</div>
+				
+				{/* Tela Principal */}
+				<div className="editor">
+					{/* Menu esquerdo */}
+					<div className="menuLeft">		
+						
+						{/* Menu das xilogravuras */}
 						<br/>
-						<table className="cores">
-							<tbody>
-								<tr>
-                                    <th colSpan="4">Selecione a cor de fundo</th>
-                                </tr>
-								{ this.createColors() }
-							</tbody>
-						</table>
-						<br/>
-						<h5 className="text-center">Adicione xilogravuras</h5>
-							<div className="xilografias">
-								<img id = "PeopleLeft"  src = { PeopleLeft } width="50" height="50"/>
-								<img id = "PeopleRight"  src = { PeopleRight }  width="50" height="50"/>
-								<img id = "Star"  src = { Star }  width="50" height="50"/>
-								<img id = "Fish"  src = { Fish }  width="50" height="50"/>
-							</div>				
+						<h2>XILOGRAVURAS</h2>
+						<div className="menuXilogravuras">
+							{/* Imagens das Xilogravuras */}
+							<img id = "PeopleLeft"  src = { PeopleLeft } width="100" height="100"/>
+							<img id = "PeopleRight"  src = { PeopleRight }  width="100" height="100"/>
+							<img id = "Star"  src = { Star }  width="100" height="100"/>
+							<img id = "Fish"  src = { Fish }  width="100" height="100"/>
+						</div>				
 					</div>	
 					
-					<div className="col-9 editor">
-						<br/>
-						<input className="cordel-title text-center" type="text" placeholder="Título do seu cordel" size="80"/>
-							<div className="white-background" style={ {backgroundImage: 'url(' + this.state.color + ')'}} >
-								<div className="text-container">
-									<textarea></textarea>
+					{/* Area do Editor */}
+					<div className="areaEditor">
+						
+							<div className="background" style={ style } >
+							
+								{/* Titulo do cordel */}
+								<div clasName="editorTitulo">
+									<input type="text" value="Digite aqui o TÍTULO"/><br/>
+								</div>
+								
+								{/* Area para coloca as xilogravuras */}
+								<div className="editorXilogravuras">
+								</div>
+								
+								{/* Area para digita os veros */}
+								<div className="editorTexto">
+									<textarea rows="10" cols="50">
+										Digite aqui o VERSOS de seu cordel!
+									</textarea>
 								</div>
 							</div>
 					</div>			   
 			   </div>
-			   <div className="bottom">
-					<table className="menubottom">	
-						<tbody>
-							<tr>
-                                <td>Voltar</td>
-                                <td>Exemplos</td>
-                                <td>Ajuda</td>
-                                <td>Concluir</td>
-                            </tr>
-						</tbody>
-					</table>
-			   </div>
+			   
+			   {/* Menu inferior */}
+			   <div className="menuBottom">
+				
+					{/* Botão Voltar */}
+					<a href="/home"  title="Voltar">
+						<img src={ btnVoltar } alt="Voltar" className="btn"/>
+					</a>
+					
+					{/* Botão Exemplos */}
+					<a href="/exemplos"  title="Exemplos">
+					  <img src={ btnExemplos } alt="Exemplos" className="btn"/>
+					</a>					
+					
+					{/* Botão Concluir */}
+					<button className="btnConcluir" onClick=""><img src={ btnConcluir } alt="Concluir" /></button>
+				    {/* Remover esse trecho após validação
+					<a href="/concluir"  title="Concluir">
+					  <img src={ btnConcluir } alt="Concluir" className="btnConcluir"/>
+					</a>
+					*/}
+				</div>	
+				
 			</div>			
 		)
     }

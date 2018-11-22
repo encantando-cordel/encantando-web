@@ -1,31 +1,3 @@
-.text-container {
-    height: 500px;
-    padding: 60px 140px 0px 200px;
-}
-textarea {
-    background: transparent;
-    color: black;
-    outline: none;
-    border: 0 none;
-    resize: none;
-    width:100%;
-    height: 300px;
-    font-size:25px;
-}
-
-.cordel-title {
-    background: transparent;
-    color: black;
-    outline: none;
-    border: 0 none;
-    font-size:25px;
-    font-family: "cordelFont";
-}
-
-a {
-    cursor: pointer;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -33,90 +5,173 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.menubottom{
-   border: 0px solid black;
-   text-align: center;   
-   color: #ffffff;
+h1{
+	text-align: center;
 }
 
-.cores {
-   border: 1px solid black;
-   text-align: center;
-   color: #4c4637; 
+/************ Menu Top ***********/
+.menuTop{	
+	padding-top: 5%;
+	padding-right: 8%;
+	padding-left: 7%;
+	#background-color: #cccccc;
+}
+
+button{
+	  background: transparent;
+    color: black;
+    outline: none;
+    border: 0 none;
+}
+
+.menuTop button{
+	float: right;
+}
+
+.menuTop div{
+	float: left;
+}
+
+.menuBackground{
+	background-image: url("../../images/moldura_cores.png");
+	background-size: 100% 100%;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+th{
+	text-align: center;
+}
+
+table{
+	width: 60%;
+	margin-left: 20%;
+	border: 1px solid;
 }
 
 .bkbranco{
+	text-align: center;
 	background-color: #ffffff;
+	width: 25px;
+	height: 25px;
 }
 
-.bkverde{
-	background-color: #0c741d;
+.bkamarelo{
+	text-align: center;
+	background-color: #fff899;
 	color: #ffffff;
+	width: 25px;
+	height: 25px;
 }
 
-.bkmarrom{
-	background-color: #663212;
+.bkmarron{
+	text-align: center;
+	background-color: #c69c6d;
 	color: #ffffff;
+	width: 25px;
+	height: 25px;
 }
 
-.bkazul{
-	background-color: #48cbe2;
+.bkrosa{
+	text-align: center;
+	background-color: #f79779;
 	color: #ffffff;
+	width: 25px;
+	height: 25px;
 }
 
-
-table{
-	width: 100%;
+/************ Editor ***************/
+.menuLeft {
+    float: left;
+    width: 30%;
+    height: 100%;  
+	  padding-left: 7%;
+	  padding-right: 1%;
 }
 
-/************ Main ***************/
+.areaEditor{	 
+    float: left;
+    width: 60%;
+    height: 100%;
+    padding-left: 2%;
+}
 
-.row:after {
+/******* Titulo ******/
+input{
+	  background: transparent;
+    color: black;
+    outline: none;
+    border: 0 none;
+    resize: none;
+	  padding-left: 20%;
+	  padding-top: 5%;
+}
+
+/****** Versos ******/
+textarea {
+    background: transparent;
+    color: black;
+    outline: none;
+    border: 0 none;
+    resize: none;
+    width: 39%;
+    height: 350px;
+    font-size: 20px;
+	margin-left: 52%;
+}
+
+.editor:after {
     content: "";
     display: table;
     clear: both;
 }
 
+.editor{
+	width: 100%;
+}
+
 @media screen and (max-width: 600px) {
-    .column {
+    .menuLeft {
         width: 100%;
     }
 }
 
-.white-background{
+.background{
+	background-image: url("../../images/bookEditor.png");
 	background-size: 100% 100%;
-	height: 80%;
+	height: 100%;
 	background-repeat: no-repeat;	
 }
 
-.blue-background{
-	background-image: url("../../images/LivroAzul.png");
+.menuXilogravuras{
+	background-image: url("../../images/moldura_xilogravura.png");
 	background-size: 100% 100%;
-	height: 80%;
-	background-repeat: no-repeat;	
+	background-repeat: no-repeat;
+	padding-left: 25px;
+	padding-top: 25px;
+	#overflow-y : scroll;
+	height: 300px;
 }
 
-.brown-background{
-	background-image: url("../../images/LivroMarrom.png");
-	background-size: 100% 100%;
-	height: 80%;
-	background-repeat: no-repeat;	
+/**************** Menu Bottom ***********/
+.menuBottom{
+	padding-top: 1%;
+	padding-left: 6%;
+	padding-right: 3%;
+	height: 118px;
 }
 
-.green-background{
-	background-image: url("../../images/LivroVerde.png");
-	background-size: 100% 100%;
-	height: 80%;
-	background-repeat: no-repeat;	
+.btn {
+  float: left;
 }
 
-.xilografias{
-	overflow-y : scroll;
-	height: 70%;
-	margin-left: 10%;
+.btnAjudar{
+  float: right;
 }
 
-.bottom{
-	background-color: #4c4637; 
-	padding: 1%;
+.btnConcluir{
+  float: right;
 }
