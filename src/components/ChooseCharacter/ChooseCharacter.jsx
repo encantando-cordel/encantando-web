@@ -18,7 +18,10 @@ export default class ChooseCharacter extends Component {
                 </div>
                 <img id = "progressButton" src= { ProgressButton } alt = ""/>
                 <img id = "manCharacter" src = { Man } alt=""/>
+                <h2  id = "manCharacterName">ERIVALDO </h2>
                 <img id = "womanCharacter" src = { Woman } alt=""/>
+                <h2  id = "womanCharacterName">SÍRLIA </h2>
+
             </div>
         )
     }

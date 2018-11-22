@@ -19,9 +19,9 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route path="/home" exact component={Home} />
-            <Route path="/novo" exact component={Editor}/>
-            <Route path="/sextilha-info" exact component={SextilhaInfo}/>
+            <Route path = "/home" exact component={Home} />
+            <Route path ="/novo" exact component={Editor}/>
+            <Route path = "/sextilha-info" exact component={SextilhaInfo}/>
             <Route path = "/home" exact component = { Home }/>
             <Route path = "/character" exact component = { ChooseCharacter }/>
             <Route path = "/history" exact component = { CordelHistory }/>
