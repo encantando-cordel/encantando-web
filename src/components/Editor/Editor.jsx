@@ -15,7 +15,12 @@ import btnConcluir from "../../images/botao_concluir_editor.png";
 export default class Editor extends Component {
   constructor(props) {
     super(props);
-    this.state = { color: "white" };
+    this.state = {
+      color: "white",
+      modalTitleMessage: "Default Title",
+      modalTextMessage: "Default Text",
+      modalSaveButtonMessage: "Default Save Message"
+    };
 
     this.bkBranco = this.bkBranco.bind(this);
     this.bkMarron = this.bkMarron.bind(this);
@@ -24,12 +29,13 @@ export default class Editor extends Component {
 
     this.isParagraphValid = this.isParagraphValid.bind(this);
     this.isLineValid = this.isLineValid.bind(this);
-    this.count_empty_lines = this.count_empty_lines.bind(this);
-    this.filter_paragraphs = this.filter_paragraphs.bind(this);
+    this.countEmptyLines = this.countEmptyLines.bind(this);
+    this.filterParagraphs = this.filterParagraphs.bind(this);
     this.validateCordelTitle = this.validateCordelTitle.bind(this);
     this.validateCordelText = this.validateCordelText.bind(this);
-    this.validateCordelWoodCut = this.validateCordelWoodCut.bind(this);
+    this.validateCordelWoodCut = this.validateCordelWoodCut.bind(this); //To-do
     this.validateCordel = this.validateCordel.bind(this);
+    this.saveCordel = this.saveCordel.bind(this);
   }
 
   bkBranco() {
@@ -62,7 +68,7 @@ export default class Editor extends Component {
     }
 
     var linesNumber =
-      paragraph.split("\n").length - this.count_empty_lines(paragraph);
+      paragraph.split("\n").length - this.countEmptyLines(paragraph);
 
     return linesNumber != 6 ? false : true;
   }
@@ -75,11 +81,11 @@ export default class Editor extends Component {
     return true;
   }
 
-  count_empty_lines(text) {
+  countEmptyLines(text) {
     return text ? (text.match(/^[ \t]*$/gm) || []).length : 0;
   }
 
-  filter_paragraphs(paragraphs) {
+  filterParagraphs(paragraphs) {
     for (var i = 0; i < paragraphs.length; i++) {
       if (paragraphs[i].trim().length == 0) {
         paragraphs.splice(i, 1);
@@ -104,7 +110,7 @@ export default class Editor extends Component {
     }
 
     var cordel_text_paragraphs = cordelText.split("\n\n");
-    cordel_text_paragraphs = this.filter_paragraphs(cordel_text_paragraphs);
+    cordel_text_paragraphs = this.filterParagraphs(cordel_text_paragraphs);
 
     for (var i = 0; i < cordel_text_paragraphs.length; i++) {
       if (!this.isParagraphValid(cordel_text_paragraphs[i])) {
@@ -119,6 +125,10 @@ export default class Editor extends Component {
     console.log("ValidateCordelWoodCut"); // To-do
   }
 
+  saveCordel() {
+    console.log("saveCordel was called"); // To-do
+  }
+
   validateCordel() {
     var cordelTitle = document.getElementById("title").value;
     var cordelText = document.getElementById("cordel").value;
@@ -126,32 +136,21 @@ export default class Editor extends Component {
     var isCordelTitleValidated = this.validateCordelTitle(cordelTitle);
     var isCordelTextValidated = this.validateCordelText(cordelText);
 
-    var modalTitleMessage;
-    var modalTextMessage;
-    var saveButtonMessage;
-
     if (isCordelTitleValidated && isCordelTextValidated) {
-      modalTitleMessage = "Parabéns!!!";
-      modalTextMessage =
-        "Você acaba de concluir o seu cordel. Caso deseje baixá-lo, clique no botão verde abaixo. ";
-      saveButtonMessage = "Baixar Cordel";
+      this.setState({
+        modalTitleMessage: "Parabéns!!!",
+        modalTextMessage:
+          "Você acaba de concluir o seu cordel. Caso deseje baixá-lo, clique no botão verde abaixo.",
+        modalSaveButtonMessage: "Baixar Cordel"
+      });
     } else {
-      modalTitleMessage = "Antes de finalizar...";
-      modalTextMessage =
-        "Um cordel precisa de um título, um texto e uma xilogravura. Abra a janela de ajuda para visualizar um tutorial sobre a criação de cordeis.";
-      saveButtonMessage = "Baixar mesmo assim";
+      this.setState({
+        modalTitleMessage: "Antes de finalizar...",
+        modalTextMessage:
+          "Um cordel precisa de um título, um texto e uma xilogravura. clique no botão de ajuda para visualizar um tutorial sobre a criação de cordeis.",
+        modalSaveButtonMessage: "Baixar mesmo assim"
+      });
     }
-
-    var modalCode =
-      '<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" > <div class="modal-dialog modal-dialog-centered" role="document"> <div class="modal-content"> <div class="modal-header"> <h5 class="modal-title" id="exampleModalLongTitle">' +
-      modalTitleMessage +
-      '</h5> <button type="button" class="close" data-dismiss="modal" aria-label="Close" > <span aria-hidden="true">&times;</span> </button> </div> <div class="modal-body">' +
-      modalTextMessage +
-      '</div> <div class="modal-footer"> <button type="button" class="btn btn-secondary" data-dismiss="modal" > Voltar </button> <button type="button" class="btn btn-success">' +
-      saveButtonMessage +
-      "</button> </div> </div> </div> </div>";
-
-    document.getElementById("modalCode").innerHTML = modalCode;
 
     document.getElementById("validateModal").click();
   }
@@ -191,15 +190,16 @@ export default class Editor extends Component {
 
           <h2>CRIANDO SEU CORDEL</h2>
 
-          {/* Botão Ajudar */}
-          <button className="btnAjuda" onClick="" title="Ajuda">
+          {/* Botão Ajuda (Ativador do modal de ajuda */}
+          <button
+            type="button"
+            className="btnAjuda"
+            data-toggle="modal"
+            data-target="#exampleModalCenter2"
+            title="Ajuda"
+          >
             <img src={btnAjuda} alt="Ajuda" />
           </button>
-          {/* Remover esse trecho após validação
-					<a href="/ajudar"  title="Ajudar">
-						<img src={ btnVoltar } alt="Ajudar" className="btnAjuda"/>
-					</a>
-					*/}
         </div>
 
         {/* Tela Principal */}
@@ -268,13 +268,9 @@ export default class Editor extends Component {
           <button className="btnConcluir" onClick={this.validateCordel}>
             <img src={btnConcluir} alt="Concluir" title="Concluir" />
           </button>
-          {/* Remover esse trecho após validação
-					<a href="/concluir"  title="Concluir">
-					  <img src={ btnConcluir } alt="Concluir" className="btnConcluir"/>
-					</a>
-					*/}
         </div>
 
+        {/* Ativador do Modal de validação */}
         <button
           type="button"
           className="btn btn-primary d-none"
@@ -285,8 +281,190 @@ export default class Editor extends Component {
           Launch demo modal
         </button>
 
-        {/* Modal Code */}
-        <div id="modalCode" />
+        {/* Modal de validação (Pop-Up) \/ */}
+        <div
+          class="modal fade"
+          id="exampleModalCenter"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  {this.state.modalTitleMessage}
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">{this.state.modalTextMessage}</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Voltar
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  data-dismiss="modal"
+                  onClick={this.saveCordel}
+                >
+                  {this.state.modalSaveButtonMessage}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Modal de ajuda (pop-up) \/ */}
+
+        <div
+          class="modal fade"
+          id="exampleModalCenter2"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">
+                  Tela de Ajuda
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active"
+                      id="general-tab"
+                      data-toggle="tab"
+                      href="#general"
+                      role="tab"
+                      aria-controls="general"
+                      aria-selected="true"
+                    >
+                      Geral
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="teste-tab"
+                      data-toggle="tab"
+                      href="#teste"
+                      role="tab"
+                      aria-controls="teste"
+                      aria-selected="false"
+                    >
+                      Titulo
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="verses-tab"
+                      data-toggle="tab"
+                      href="#verses"
+                      role="tab"
+                      aria-controls="verses"
+                      aria-selected="false"
+                    >
+                      Versos
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      id="woodcut-tab"
+                      data-toggle="tab"
+                      href="#woodcut"
+                      role="tab"
+                      aria-controls="woodcut"
+                      aria-selected="false"
+                    >
+                      Xilogravura
+                    </a>
+                  </li>
+                </ul>
+                <div class="tab-content mt-3" id="myTabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="general"
+                    role="tabpanel"
+                    aria-labelledby="general-tab"
+                  >
+                    Este guia foi feito para lhe ajudar a criar o seu próprio
+                    cordel. Escolhe dentre as abas acima para saber como
+                    realizar cada etapa da criação do cordel.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="teste"
+                    role="tabpanel"
+                    aria-labelledby="teste-tab"
+                  >
+                    O seu cordel deve possuir um titulo. Não se esqueça dar um
+                    nome ao seu cordel no editor.
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="verses"
+                    role="tabpanel"
+                    aria-labelledby="verses-tab"
+                  >
+                    Um cordel possui um ou mais paragráfos. Cada parágrafo deve
+                    possuir versos, que são as linhas que você irá escrever no
+                    lado direito do editor. É interessante criar versos que
+                    terminem com palavras de som parecido. Além disso, atente-se
+                    para o número de versos em cada parágrafo. (Por exemplo, se
+                    estiver criando uma sextilha, cada parágrafo deve ter 6
+                    linhas!)
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="woodcut"
+                    role="tabpanel"
+                    aria-labelledby="woodcut-tab"
+                  >
+                    Um cordel é mais bonito com desenhos! Clique nas figuras do
+                    lado esquerdo do editor para adicionar um desenho ao seu
+                    cordel!
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Sair
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
