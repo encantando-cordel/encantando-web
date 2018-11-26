@@ -3,22 +3,44 @@ import "./ChooseCharacter.css";
 
 import Woman from "../../images/woman-character.png";
 import Man from "../../images/man-character.png";
+import ManSelected from "../../images/man-character-selected.png";
+import WomanSelected from "../../images/woman-character-selected.png";
 import Book from "../../images/book.png";
 import ProgressButton from "../../images/progress-button.png";
 
 export default class ChooseCharacter extends Component {
   constructor(props) {
     super(props);
-    this.chooseManCharacter = this.chooseManCharacter.bind(this);
-    this.chooseWomanCharacter = this.chooseWomanCharacter.bind(this);
+    this.state = {
+      imgMan: Man,
+      imgWoman: Woman,
+      selected: false
+    };
+    this.handleMouseClick = this.handleMouseClick.bind(this);
   }
 
-  chooseManCharacter() {
-    localStorage.setItem("character", "Erivaldo");
+  handleMouseClick(e) {
+    if (this.state.imgMan === ManSelected && e.target.id === "womanCharacter") {
+      this.setState({ imgMan: Man, imgWoman: WomanSelected });
+      localStorage.setItem("character", "Sirlia");
+    } else if (
+      this.state.imgWoman === WomanSelected &&
+      e.target.id === "manCharacter"
+    ) {
+      this.setState({ imgMan: ManSelected, imgWoman: Woman });
+      localStorage.setItem("character", "Erivaldo");
+    } else {
+      e.target.id === "manCharacter"
+        ? this.setState({ imgMan: ManSelected })
+        : this.setState({ imgWoman: WomanSelected });
+      localStorage.setItem("character", "Erivaldo");
+    }
   }
 
-  chooseWomanCharacter() {
-    localStorage.setItem("character", "Sirlia");
+  confirmCharacter() {
+    if (this.state.imgMan === ManSelected) {
+    } else if (this.state.imgWoman === WomanSelected) {
+    }
   }
 
   render() {
@@ -30,19 +52,24 @@ export default class ChooseCharacter extends Component {
         <div className="book">
           <img src={Book} alt="" />
         </div>
-        <img id="progressButton" src={ProgressButton} alt="" />
+        <img
+          id="progressButton"
+          onClick={() => this.confirmCharacter()}
+          src={ProgressButton}
+          alt=""
+        />
         <img
           id="manCharacter"
-          src={Man}
+          src={this.state.imgMan}
+          onClick={this.handleMouseClick}
           alt=""
-          onClick={this.chooseManCharacter}
         />
         <h2 id="manCharacterName">ERIVALDO </h2>
         <img
           id="womanCharacter"
-          src={Woman}
+          src={this.state.imgWoman}
+          onClick={this.handleMouseClick}
           alt=""
-          onClick={this.chooseWomanCharacter}
         />
         <h2 id="womanCharacterName">SÍRLIA </h2>
       </div>
