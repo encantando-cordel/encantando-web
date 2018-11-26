@@ -13,6 +13,8 @@ import Credits from './components/Credits/Credits';
 import ChooseCharacter from './components/ChooseCharacter/ChooseCharacter';
 import CordelHistory from './components/CordelHistory/CordelHistory';
 import SextilhaInfo from './components/SextilhaInfo/SextilhaInfo';
+import CordelExample from './components/CordelExample/CordelExample';
+import CordelExample2 from './components/CordelExample2/CordelExample2';
 
 class App extends Component {
   render() {
@@ -22,8 +24,9 @@ class App extends Component {
           <Switch>
             <Route path = "/home" exact component={Home} />
             <Route path ="/novo" exact component={Editor}/>
+            <Route path = "/exemplo" exact component={CordelExample} />
+            <Route path = "/exemplo2" exact component={CordelExample2} />
             <Route path = "/sextilha-info" exact component={SextilhaInfo}/>
-            <Route path = "/home" exact component = { Home }/>
             <Route path = "/character" exact component = { ChooseCharacter }/>
             <Route path = "/history" exact component = { CordelHistory }/>
             <Route path = "/credits" exact component = {Credits}/>

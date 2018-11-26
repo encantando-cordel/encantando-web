@@ -20,11 +20,11 @@ export default () => (
             <div className = "fish-container">
                 <img src = { Fish } alt = ""/>
                 <div className = "SeaWeed">
-                    <img src = { SeaWeed } alt = ""/>
+                    <img  src = { SeaWeed } alt = ""/>
                     <img  src = { SeaWeed } alt = ""/>
                     <img  src = { SeaWeed } alt = ""/>
                 </div>
-                <button>Voltar</button>
+                {/* <button>Voltar</button> */}
             </div>
         </div>
     </div>
