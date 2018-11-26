@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 
-import PeopleRight  from '../../images/peopleRight.png';
+import PeopleRight  from '../../images/musicos.gif';
 import StarAnimation from '../../images/star-animation.gif';
 import Star from '../../images/star.png';
 import Dancers from '../../images/dancers.gif';
