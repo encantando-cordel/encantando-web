@@ -1,4 +1,4 @@
-# Encatando Cordel
+# Encantando Cordel
 Aplicação criada para a disciplina de software livre
 
 
