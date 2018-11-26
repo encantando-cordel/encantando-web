@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Home.css';
 
-import PeopleRight  from '../../images/peopleRight.png';
+import PeopleRight  from '../../images/musicos.gif';
 import StarAnimation from '../../images/star-animation.gif';
 import Star from '../../images/star.png';
 import Dancers from '../../images/dancers.gif';
@@ -30,7 +30,10 @@ export default class Home extends Component {
                         <h2 onClick = {() => this.props.history.push('/character')}>Iniciar</h2>
                     </div>
                     <div>
-                        <h2>Créditos</h2>
+                        <h2 onClick = {() => this.props.history.push('/credits')}>Créditos</h2>
+                    </div>
+                    <div>
+                          <h2 onClick = {() => this.props.history.push('/exemplo')}>Exemplo</h2>
                     </div>
                 </div>
                 <img  id = "peopleRight"  src = { PeopleRight } alt = ""/>
