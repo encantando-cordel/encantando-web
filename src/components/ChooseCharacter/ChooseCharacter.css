@@ -14,10 +14,12 @@
 
 #manCharacter {
     position: absolute;
+    cursor: pointer
 }
 
 #womanCharacter {
     position: absolute;
+    cursor:pointer;
 }
 
 @media only screen and (max-width: 600px) {
