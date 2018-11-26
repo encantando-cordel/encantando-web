@@ -63,14 +63,14 @@
         width: 20vw;
     }
     #manCharacterName {
-        top: 57%;
-        left: 20%;
+        top: 51%;
+        left: 17%;
         width: 25vw;
         position: fixed;
      }
 
      #womanCharacterName {
-       top: 57%;
+       top: 51%;
         right: 25%;
         width: 20vw;
         position: fixed;
@@ -150,7 +150,7 @@
 
     .book > img {
         height: 30vh;
-        width: 75vw;
+        width: 82vw;
     }
 
     .book {
@@ -170,15 +170,15 @@
     }
 
     #manCharacterName {
-        top: 60%;
-        left: 23%;
+        top: 55%;
+        left: 12%;
         width: 20vw;
         position: fixed;
      }
 
      #womanCharacterName {
-        top: 60%;
-        right: 20%;
+        top: 55%;
+        right: 24%;
         width: 20vw;
         position: fixed;
     }
@@ -207,6 +207,7 @@
 
     .book > img {
         height: 40vh;
+	width: 66vh;
     }
 
     .book { 
