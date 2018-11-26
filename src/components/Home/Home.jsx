@@ -30,7 +30,10 @@ export default class Home extends Component {
                         <h2 onClick = {() => this.props.history.push('/novo')}>Iniciar</h2>
                     </div>
                     <div>
-                        <h2>Créditos</h2>
+                          <h2 onClick = {() => this.props.history.push('/novo')}>Creditos</h2>
+                    </div>
+                    <div>
+                          <h2 onClick = {() => this.props.history.push('/exemplo')}>Exemplo</h2>
                     </div>
                 </div>
                 <img  id = "peopleRight"  src = { PeopleRight } alt = ""/>
