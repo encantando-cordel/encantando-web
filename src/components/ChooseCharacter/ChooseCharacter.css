@@ -63,14 +63,14 @@
         width: 20vw;
     }
     #manCharacterName {
-        top: 57%;
-        left: 20%;
+        top: 51%;
+        left: 17%;
         width: 25vw;
         position: fixed;
      }
 
      #womanCharacterName {
-       top: 57%;
+       top: 51%;
         right: 25%;
         width: 20vw;
         position: fixed;
@@ -150,7 +150,7 @@
 
     .book > img {
         height: 30vh;
-        width: 75vw;
+        width: 82vw;
     }
 
     .book {
@@ -159,26 +159,26 @@
 
     #manCharacter {
         top: 41%;
-        left: 24%;
-        width: 15vw;
+        left: 32%;
+        width: 12vw;
     }
 
     #womanCharacter {
         top: 41%;
-        right: 27%;
-        width: 13vw;
+        right: 34%;
+        width: 12vw;
     }
 
     #manCharacterName {
-        top: 60%;
-        left: 23%;
+        top: 55%;
+        left: 12%;
         width: 20vw;
         position: fixed;
      }
 
      #womanCharacterName {
-        top: 60%;
-        right: 20%;
+        top: 55%;
+        right: 24%;
         width: 20vw;
         position: fixed;
     }
@@ -207,13 +207,42 @@
 
     .book > img {
         height: 40vh;
+	width: 66vh;
     }
 
     .book { 
         margin-top: 2vh;
     }
 
+   #manCharacter {
+        top: 41%;
+        left: 32%;
+        width: 12vw;
+    }
+
+    #womanCharacter {
+        top: 41%;
+        right: 34%;
+        width: 12vw;
+    }
+
+    #manCharacterName {
+        top: 64%;
+        left: 27%;
+        width: 20vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+        top: 64%;
+        right: 30%;
+        width: 20vw;
+        position: fixed;
+    }
+
 } 
+
+
 
 
 @media only screen and (min-width: 1200px) {
@@ -288,14 +317,14 @@
         top: 31%;
     }
    #manCharacterName {
-        top: 60%;
+        top: 57%;
         left: 28%;
         width: 25vw;
         position: fixed;
      }
 
      #womanCharacterName {
-       top: 60%;
+       top: 57%;
         right: 32%;
         width: 20vw;
         position: fixed;
