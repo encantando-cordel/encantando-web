@@ -12,6 +12,8 @@ import btnExemplos from "../../images/progress-button.png";
 import btnAjuda from "../../images/progress-button.png";
 import btnConcluir from "../../images/botao_concluir_editor.png";
 
+import jsPDF from 'jspdf';
+
 export default class Editor extends Component {
   constructor(props) {
     super(props);
@@ -160,7 +162,15 @@ export default class Editor extends Component {
   }
 
   saveCordel() {
-    console.log("saveCordel was called"); // To-do
+    let cordelTitle = document.getElementById("title").value;
+    let cordelText = document.getElementById("cordel").value;
+    var doc = new jsPDF()
+
+    doc.setFontSize(25);
+    doc.text(20, 20, cordelTitle);
+    doc.setFontSize(14);
+    doc.text(20, 30, cordelText);
+    doc.save(`${cordelTitle}.pdf`);
   }
 
   validateCordel() {
