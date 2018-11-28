@@ -7,6 +7,8 @@ import Star from "../../images/star.png";
 import Dancers from "../../images/dancers.gif";
 import Moon from "../../images/moon-animation.gif";
 
+
+
 export default class Home extends Component {
   render() {
     return (

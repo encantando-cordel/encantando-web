@@ -43,6 +43,7 @@ export default class ChooseCharacter extends Component {
     }
   }
 
+<<<<<<< HEAD
   render() {
     return (
       <div className="main">
@@ -75,4 +76,5 @@ export default class ChooseCharacter extends Component {
       </div>
     );
   }
+
 }
