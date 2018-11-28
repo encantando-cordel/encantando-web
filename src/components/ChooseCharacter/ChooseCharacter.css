@@ -120,7 +120,7 @@
 
       #manCharacterName {
         top: 57%;
-        left: 22%;
+        left: 17%;
         width: 25vw;
         position: fixed;
      }
@@ -207,7 +207,7 @@
 
     .book > img {
         height: 40vh;
-	width: 66vh;
+	width: 77vh;
     }
 
     .book { 
@@ -227,15 +227,66 @@
     }
 
     #manCharacterName {
-        top: 64%;
-        left: 27%;
+        top: 60%;
+        left: 22%;
         width: 20vw;
         position: fixed;
      }
 
      #womanCharacterName {
-        top: 64%;
-        right: 30%;
+        top: 60%;
+        right: 26%;
+        width: 20vw;
+        position: fixed;
+    }
+
+} 
+
+@media only screen and (min-width: 992px) and (min-height: 1000px){
+    .character > h1 {
+        font-size: 6vh;
+    }
+  .character > h2{
+        font-size: 3vh;
+    }   
+
+    #progressButton {
+        width: 30vw;
+        left: 33%;
+        bottom: 12%;
+    }
+
+    .book > img {
+        height: 40vh;
+	width: 81vh;
+    }
+
+    .book { 
+        margin-top: 2vh;
+    }
+
+   #manCharacter {
+        top: 41%;
+        left: 32%;
+        width: 12vw;
+    }
+
+    #womanCharacter {
+        top: 41%;
+        right: 34%;
+        width: 12vw;
+    }
+
+    #manCharacterName {
+        top: 57%;
+        left: 18%;
+        width: 20vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+        top: 57%;
+        right: 26%;
         width: 20vw;
         position: fixed;
     }
@@ -286,10 +337,111 @@
 
 }
 
-@media only screen and (min-width: 1400px) {
+
+@media only screen and (min-width: 1168px) and (min-height:700px){
+	.character > h2{
+        font-size: 3vh;
+    }   
     .book > img {
         height: 45vh;
+        width: 60vw;
+    }
+
+    #progressButton {
+        width: 20vw !important;
+        bottom: 11% !important;
+        left: 70%;
+    }
+
+    #manCharacter {
+       left: 30%;
+    width: 12vw;
+    top: 34%;
+    }
+
+    #womanCharacter {
+        right: 32%;
+	top: 34%;
+       width: 12vw;
+    }
+   #manCharacterName {
+        top: 58%;
+        left: 23%;
+        width: 25vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+        top: 58%;
+        right: 28%;
+        width: 20vw;
+        position: fixed;
+    }
+
+}
+
+@media only screen and (min-width: 790px) and (max-width: 1020px) {
+
+ .character > h1{
+        font-size: 5vh;
+    }
+  .character > h2{
+        font-size: 3vh;
+    } 
+
+    .character {
+        padding-left: 6%;
+        padding-right: 6%;
+        padding-top: 4%;
+    }
+
+    .book > img {
+        height: 30vh;
+        width: 82vw;
+    }
+
+    .book {
+        margin-top: 8vh;
+    }
+
+    #manCharacter {
+        top: 41%;
+        left: 26%;
+        width: 12vw;
+    }
+
+    #womanCharacter {
+        top: 41%;
+        right: 29%;
+        width: 12vw;
+    }
+
+    #manCharacterName {
+        top: 58%;
+        left: 18%;
+        width: 20vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+        top: 58%;
+        right: 24%;
+        width: 20vw;
+        position: fixed;
+    }
+
+    #progressButton {
+        bottom: 20%;
         width: 40vw;
+        left: 28%;
+    }
+
+}
+
+@media only screen and (min-width: 1400px) and (min-height: 700px) {
+ .book > img {
+        height: 45vh;
+        width: 75vw;
     }
 
     .book {
@@ -330,6 +482,145 @@
         position: fixed;
     }
 
+}
+
+@media only screen and (min-width: 1400px)  {
+    .book > img {
+        height: 45vh;
+        width: 75vw;
+    }
+
+    .book {
+        margin-top: 5vh;
+    }
+    .character {
+        margin-top: 5vh;
+    }
+
+    #progressButton {
+        width: 15vw !important;
+        bottom: 11% !important;
+        left: 70%;
+    }
+
+    #manCharacter {
+        left: 29%;
+        width: 12vw;
+        top: 34%;
+    }
+
+    #womanCharacter {
+        right: 32%;
+        width: 10vw;
+        top: 35%;
+    }
+   #manCharacterName {
+        top: 59%;
+        left: 21%;
+        width: 25vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+       top: 59%;
+        right: 28%;
+        width: 20vw;
+        position: fixed;
+    }
+}
+
+
+
+@media only screen and (min-width: 1514px)  {
+    .book > img {
+        height: 45vh;
+        width: 75vw;
+    }
+
+    .book {
+        margin-top: 5vh;
+    }
+    .character {
+        margin-top: 5vh;
+    }
+
+    #progressButton {
+        width: 15vw !important;
+        bottom: 11% !important;
+        left: 70%;
+    }
+
+    #manCharacter {
+        left: 29%;
+        width: 12vw;
+        top: 30%;
+    }
+
+    #womanCharacter {
+        right: 32%;
+        width: 10vw;
+        top: 30%;
+    }
+   #manCharacterName {
+        top: 56%;
+        left: 21%;
+        width: 25vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+       top: 56%;
+        right: 28%;
+        width: 20vw;
+        position: fixed;
+    }
+}
+
+
+@media only screen and (min-width: 1514px) and (min-height: 1001px) {
+    .book > img {
+        height: 45vh;
+        width: 75vw;
+    }
+
+    .book {
+        margin-top: 5vh;
+    }
+    .character {
+        margin-top: 5vh;
+    }
+
+    #progressButton {
+        width: 15vw !important;
+        bottom: 11% !important;
+        left: 70%;
+    }
+
+    #manCharacter {
+        left: 29%;
+        width: 14vw;
+        top: 35%;
+    }
+
+    #womanCharacter {
+        right: 32%;
+        width: 13vw;
+        top: 35%;
+    }
+   #manCharacterName {
+        top: 61%;
+        left: 21%;
+        width: 25vw;
+        position: fixed;
+     }
+
+     #womanCharacterName {
+       top: 61%;
+        right: 28%;
+        width: 20vw;
+        position: fixed;
+    }
+}
 @media only screen and (max-height: 500px){
 
  #manCharacterName {
@@ -370,4 +661,4 @@
 
 
   }
-}
+
