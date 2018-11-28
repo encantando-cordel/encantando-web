@@ -46,7 +46,7 @@ export default class ChooseCharacter extends Component {
                 <div className = "book">
                     <img src= { Book } alt = ""/>
                 </div>
-                <img id = "progressButton" onClick= {() => this.confirmCharacter()}  src= {ProgressButton} alt = ""/>
+                <img id = "progressButton" onClick = {() => this.props.history.push('/apresentacao')}  src= {ProgressButton} alt = ""/>
                 <img id = "manCharacter"  src= {this.state.imgMan} 
                     onClick= {this.handleMouseClick} alt=""
                 />
