@@ -19,7 +19,6 @@ class CharacterPresentation extends Component {
 		    		<img src={btnAvancar} alt="Novo" className="btn" />
 		 	</a>	
 
-
       		<a className="back" href="/character" title="back" >
 		    		<img src={bntVoltar} alt="back" className="btn" />
 		 	</a>
