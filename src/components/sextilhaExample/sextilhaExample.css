@@ -1,0 +1,38 @@
+.mainSextExample {
+    background-image: url('../../images/exemplo_de_SEXTILHA.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-size: 100% 100%;
+}
+
+@font-face {
+	font-family: cordelEncantado;
+	src: url(../../fonts/Cordel Encarnado.ttf);
+}
+
+.Box {
+	position: absolute;
+	overflow:scroll;
+	width:400px; 
+	height:400px;
+	top: 20%;
+	left: 50%;
+}
+
+p {
+	font-family: "cordelEncantado";
+}
+
+.button1 {
+    position: absolute;
+    top: 82%;
+    right: 78%;
+}
+
+.button2 {
+	position: absolute;
+    top: 82%;
+    right: 10%;
+ }
