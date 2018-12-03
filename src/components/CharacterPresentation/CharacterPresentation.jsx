@@ -13,7 +13,7 @@ class CharacterPresentation extends Component {
     return (
 	<div className="presentation">     
       		<div className="general">
-      			<a className="next" href="/novo" title="Novo" >
+      			<a className="next" href="/activity" title="Novo" >
 		    		<img src={btnAvancar} alt="Novo" className="btn" />
 		 	</a>	
       			<a className="back" href="/character" title="back" >

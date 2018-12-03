@@ -34,9 +34,6 @@ export default class Home extends Component {
                     <div>
                         <h2 onClick = {() => this.props.history.push('/credits')}>Créditos</h2>
                     </div>
-                    <div>
-                          <h2 onClick = {() => this.props.history.push('/exemplo')}>Exemplo</h2>
-                    </div>
                 </div>
                 <img  id = "peopleRight"  src = { PeopleRight } alt = ""/>
             </div>
