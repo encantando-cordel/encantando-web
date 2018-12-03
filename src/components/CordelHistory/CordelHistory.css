@@ -29,20 +29,19 @@
     /* margin-right: 10%; */
 }
 
+
 #inverse-arrow {
     transform: scaleX(-1);
     margin-left: 20vw;
 }
-
-
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 400px) {
     
     .history-box {
-        margin-top: 12%;
+        margin-top: 21%;
     }
 
     .history-box > h1 {
-        font-size: 5vh;
+        font-size: 2vh;
     }
 
     .frame-container {
@@ -50,7 +49,8 @@
     }
 
     .frame-container > img {
-        width: 100%;
+       height: 20vh;
+        width: 29vw;
     }
 
     .arrow-buttons-container > img {
@@ -58,9 +58,135 @@
     }
 
     .fish-container > img{
+         height: 30vh;
+        width: 29vw;
+    }
+
+    .fish-container {
         width: 40%;
     }
 
+    .SeaWeed > img{
+        width: 28%;
+    }
+
+    .fish-container {
+        width: 55%;
+    }
+} 
+
+@media only screen and (min-width: 600px) {
+    
+    .history-box {
+        margin-top: 20%;
+    }
+
+    .history-box > h1 {
+        font-size: 2vh;
+    }
+
+    .frame-container {
+        width: 45%;
+    }
+
+    .frame-container > img {
+       height: 20vh;
+        width: 29vw;
+    }
+
+    .arrow-buttons-container > img {
+        width: 15%;
+    }
+
+    .fish-container > img{
+         height: 30vh;
+        width: 29vw;
+    }
+
+    .fish-container {
+        width: 40%;
+    }
+    .SeaWeed > img{
+        width: 28%;
+    }
+
+    .fish-container {
+        width: 55%;
+    }
+} 
+
+@media only screen and (min-width: 768px) {
+    
+    .history-box {
+        margin-top: 16%;
+    }
+
+    .history-box > h1 {
+        font-size: 2vh;
+    }
+
+    .frame-container {
+        width: 45%;
+    }
+
+    .frame-container > img {
+       height: 20vh;
+        width: 29vw;
+    }
+
+    .arrow-buttons-container > img {
+        width: 15%;
+    }
+
+    .fish-container > img{
+         height: 30vh;
+        width: 29vw;
+    }
+
+    .fish-container {
+        width: 40%;
+    }
+
+    .SeaWeed > img{
+        width: 28%;
+    }
+
+    .fish-container {
+        width: 55%;
+    }
+} 
+
+@media only screen and (min-width: 992px) {
+    
+    .history-box {
+        margin-top: 18%;
+    }
+
+    .history-box > h1 {
+        font-size: 2vh;
+    }
+
+    .frame-container {
+        width: 45%;
+    }
+
+    .frame-container > img {
+       height: 30vh;
+        width: 29vw;
+    }
+
+    .arrow-buttons-container > img {
+        width: 15%;
+    }
+
+    .fish-container > img{
+         height: 20vh;
+        width: 29vw;
+    }
+
+    .fish-container {
+        width: 40%;
+    }
     .SeaWeed > img{
         width: 28%;
     }

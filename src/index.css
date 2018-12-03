@@ -16,3 +16,46 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.btn-basic {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.btn-basic:hover {
+  color: #faf701;
+  background-color: #000000;
+  border-color: #000000;
+}
+
+.btn-basic:focus, .btn-basic.focus {
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+
+.btn-basic.disabled, .btn-basic:disabled {
+  color: #fff;
+  background-color: #212529;
+  border-color: #212529;
+}
+
+.btn-basic:not(:disabled):not(.disabled):active, .btn-basic:not(:disabled):not(.disabled).active,
+.show > .btn-basic.dropdown-toggle {
+  color: #fff;
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+.btn-basic:not(:disabled):not(.disabled):active:focus, .btn-basic:not(:disabled):not(.disabled).active:focus,
+.show > .btn-basic.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(33, 37, 41, 0.5);
+}
+.btn-item {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-right: 4em;
+}
