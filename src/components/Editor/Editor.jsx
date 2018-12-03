@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./Editor.css";
 
+import jsPDF from "jspdf";
+
 import PeopleRight from "../../images/peopleRight.png";
 import PeopleLeft from "../../images/peopleLeft.png";
 import Star from "../../images/star.png";
@@ -165,7 +167,6 @@ export default class Editor extends Component {
     let cordelTitle = document.getElementById("title").value;
     let cordelText = document.getElementById("cordel").value;
     var doc = new jsPDF();
-
     doc.setFontSize(25);
     doc.text(20, 20, cordelTitle);
     doc.setFontSize(14);
