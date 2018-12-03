@@ -10,11 +10,11 @@ h1 {
 }
 
 /************ Menu Top ***********/
+
 .menuTop {
-  padding-top: 5%;
+  padding-top: 8%;
   padding-right: 8%;
   padding-left: 7%;
-  #background-color: #cccccc;
 }
 
 button {
@@ -26,6 +26,7 @@ button {
 
 .menuTop button {
   float: right;
+  margin-top: 0%;
 }
 
 .menuTop div {
@@ -91,7 +92,6 @@ table {
   padding-left: 7%;
   padding-right: 1%;
 }
-
 .areaEditor {
   float: left;
   width: 60%;
@@ -118,7 +118,7 @@ textarea {
   border: 0 none;
   resize: none;
   width: 39%;
-  height: 350px;
+  height: 250px;
   font-size: 20px;
   margin-left: 52%;
 }
@@ -174,6 +174,7 @@ textarea {
 
 .btnConcluir {
   float: right;
+  padding-top: 0%;
 }
 
 .help-character-validation-woman {

@@ -12,7 +12,7 @@ import btnExemplos from "../../images/progress-button.png";
 import btnAjuda from "../../images/progress-button.png";
 import btnConcluir from "../../images/botao_concluir_editor.png";
 
-import jsPDF from 'jspdf';
+import jsPDF from "jspdf";
 
 export default class Editor extends Component {
   constructor(props) {
@@ -164,7 +164,7 @@ export default class Editor extends Component {
   saveCordel() {
     let cordelTitle = document.getElementById("title").value;
     let cordelText = document.getElementById("cordel").value;
-    var doc = new jsPDF()
+    var doc = new jsPDF();
 
     doc.setFontSize(25);
     doc.text(20, 20, cordelTitle);
@@ -231,7 +231,6 @@ export default class Editor extends Component {
               </table>
             </div>
           </div>
-
           <h2>CRIANDO SEU CORDEL</h2>
 
           {/* Botão Ajuda (Ativador do modal de ajuda */}
@@ -455,14 +454,13 @@ export default class Editor extends Component {
                 </ul>
                 <div class="tab-content mt-3" id="myTabContent">
                   <div
-                    class="tab-pane fade show active test"
+                    class="tab-pane fade show active"
                     id="general"
                     role="tabpanel"
                     aria-labelledby="general-tab"
                   >
-                    {"                                                     "}
                     Este guia foi feito para lhe ajudar a criar o seu próprio
-                    cordel. Escolha dentre as abas acima para saber como
+                    cordel. Escolhe dentre as abas acima para saber como
                     realizar cada etapa da criação do cordel.
                   </div>
                   <div
