@@ -11,10 +11,11 @@ h1{
 
 /************ Menu Top ***********/
 .menuTop{	
-	padding-top: 5%;
+	padding-top: 8%;
 	padding-right: 8%;
 	padding-left: 7%;
 }
+
 
 button{
 	  background: transparent;
@@ -25,6 +26,7 @@ button{
 
 .menuTop button{
 	float: right;
+	margin-top: 0%;
 }
 
 .menuTop div{
@@ -94,7 +96,7 @@ table{
 .areaEditor{	 
     float: left;
     width: 60%;
-    height: 100%;
+    height: 80%;
     padding-left: 2%;
 }
 
@@ -117,7 +119,7 @@ textarea {
     border: 0 none;
     resize: none;
     width: 39%;
-    height: 350px;
+    height: 250px;
     font-size: 20px;
 	margin-left: 52%;
 }
@@ -152,7 +154,7 @@ textarea {
 	padding-left: 25px;
 	padding-top: 25px;
 	#overflow-y : scroll;
-	height: 300px;
+	height: 250px;
 }
 
 /**************** Menu Bottom ***********/
@@ -160,7 +162,7 @@ textarea {
 	padding-top: 1%;
 	padding-left: 6%;
 	padding-right: 3%;
-	height: 118px;
+	height: 100px;
 }
 
 .btn {
@@ -173,4 +175,5 @@ textarea {
 
 .btnConcluir{
   float: right;
+  padding-top: 0%;
 }

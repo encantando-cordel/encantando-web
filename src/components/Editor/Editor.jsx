@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import "./Editor.css";
 
+import jsPDF from 'jspdf';
+
 import PeopleRight from "../../images/peopleRight.png";
 import PeopleLeft from "../../images/peopleLeft.png";
 import Star from "../../images/star.png";
 import Fish from "../../images/fish.gif";
 import Livro from "../../images/book.png";
 
-import btnVoltar from "../../images/progress-button.png";
-import btnExemplos from "../../images/progress-button.png";
+import btnVoltar from "../../images/btt_voltar.png";
+import btnExemplos from "../../images/btt_exemplos.png";
 import btnAjuda from "../../images/progress-button.png";
-import btnConcluir from "../../images/botao_concluir_editor.png";
-
-import jsPDF from 'jspdf';
+import btnConcluir from "../../images/btt_concluir1.png";
 
 export default class Editor extends Component {
   constructor(props) {
@@ -131,12 +131,12 @@ export default class Editor extends Component {
     let cordelTitle = document.getElementById("title").value;
     let cordelText = document.getElementById("cordel").value;
     var doc = new jsPDF()
-
     doc.setFontSize(25);
     doc.text(20, 20, cordelTitle);
     doc.setFontSize(14);
     doc.text(20, 30, cordelText);
     doc.save(`${cordelTitle}.pdf`);
+    console.log("saveCordel was called"); // To-do
   }
 
   validateCordel() {
@@ -198,18 +198,16 @@ export default class Editor extends Component {
             </div>
           </div>
 
-          <h2>CRIANDO SEU CORDEL</h2>
-
-          {/* Botão Ajuda (Ativador do modal de ajuda */}
-          <button
-            type="button"
-            className="btnAjuda"
-            data-toggle="modal"
-            data-target="#exampleModalCenter2"
-            title="Ajuda"
-          >
-            <img src={btnAjuda} alt="Ajuda" />
-          </button>
+          <h2>CRIANDO SEU CORDEL
+			  {/* Botão Ajuda (Ativador do modal de ajuda */}
+			  <button
+				type="button"
+				className="btnAjuda"
+				data-toggle="modal"
+				data-target="#exampleModalCenter2"
+				title="Ajuda"
+			  >?<br/>Ajuda</button>
+		  </h2>
         </div>
 
         {/* Tela Principal */}
@@ -252,7 +250,7 @@ export default class Editor extends Component {
               {/* Area para digita os veros */}
               <div className="editorTexto">
                 <textarea
-                  rows="10"
+                  rows="5"
                   cols="50"
                   placeholder="	Digite aqui o VERSOS de seu cordel!"
                   id="cordel"
