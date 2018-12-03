@@ -455,13 +455,14 @@ export default class Editor extends Component {
                 </ul>
                 <div class="tab-content mt-3" id="myTabContent">
                   <div
-                    class="tab-pane fade show active"
+                    class="tab-pane fade show active test"
                     id="general"
                     role="tabpanel"
                     aria-labelledby="general-tab"
                   >
+                    {"                                                     "}
                     Este guia foi feito para lhe ajudar a criar o seu próprio
-                    cordel. Escolhe dentre as abas acima para saber como
+                    cordel. Escolha dentre as abas acima para saber como
                     realizar cada etapa da criação do cordel.
                   </div>
                   <div

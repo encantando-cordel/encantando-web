@@ -43,7 +43,6 @@ export default class ChooseCharacter extends Component {
     }
   }
 
-<<<<<<< HEAD
   render() {
     return (
       <div className="main">
@@ -55,7 +54,7 @@ export default class ChooseCharacter extends Component {
         </div>
         <img
           id="progressButton"
-          onClick={() => this.confirmCharacter()}
+          onClick={() => this.props.history.push("/apresentacao")}
           src={ProgressButton}
           alt=""
         />
@@ -76,5 +75,4 @@ export default class ChooseCharacter extends Component {
       </div>
     );
   }
-
 }
