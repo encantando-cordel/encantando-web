@@ -16,6 +16,11 @@ import SextilhaInfo from './components/SextilhaInfo/SextilhaInfo';
 import CordelExample from './components/CordelExample/CordelExample';
 import CordelExample2 from './components/CordelExample2/CordelExample2';
 import ChooseActivity from './components/ChooseActivity/ChooseActivity';
+import sextilhaExample from './components/sextilhaExample/sextilhaExample';
+
+
+import CharacterPresentation from './components/CharacterPresentation/CharacterPresentation';
+
 
 class App extends Component {
   render() {
@@ -24,11 +29,14 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <Route path = "/home" exact component={Home} />
-            <Route path = "/novo" exact component={Editor}/>
+            <Route path = "/character" exact component = { ChooseCharacter }/>
+            <Route path = "/apresentacao" exact component = { CharacterPresentation }/>
+            <Route path = "/sextilha-info" exact component={SextilhaInfo}/>
+            <Route path = "/sextilhaExample" exact component={sextilhaExample}/>
             <Route path = "/exemplo" exact component={CordelExample} />
             <Route path = "/exemplo2" exact component={CordelExample2} />
-            <Route path = "/sextilha-info" exact component={SextilhaInfo}/>
-            <Route path = "/character" exact component = { ChooseCharacter }/>
+            <Route path = "/novo" exact component={Editor}/>
+
             <Route path = "/history" exact component = { CordelHistory }/>
             <Route path = "/credits" exact component = {Credits}/>
             <Route path = "/activity" exact component = { ChooseActivity }/>

@@ -1,0 +1,50 @@
+.mainSextInfo {
+    background-image: url('../../images/tela_explainSexti.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-size: 100% 100%;
+    display: flex;
+}
+
+.sextText{
+    display: flex;
+    padding: 50%;
+    width: 200px;
+    height: 400px;
+
+}
+.generalToSext {
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 60px;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+
+.generalToSext a.nextToSext {    
+    align-items: flex-end;
+}
+
+.generalToSext a.nextToSext img { 
+    width: 250px;
+    height: 75px;
+    min-width: 70px;
+    min-height: 70px;
+}
+
+.generalToSext a.backToSext {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.generalToSext a.backToSext img {
+    min-width: 70px;
+    min-height: 70px; 
+}

@@ -1,0 +1,41 @@
+.presentation {
+    background-image: url('../../images/tela_apresentacao_personagem.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    background-size: 100% 100%;
+    display: flex;
+}
+
+.general {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    align-items: flex-end;
+    margin-bottom: 100px;
+    margin-right: 90px;
+    margin-left: 90px;
+}
+
+.general a.next {
+    
+    align-items: flex-end;
+}
+
+.general a.next img { 
+    min-width: 70px;
+    min-height: 70px; 
+}
+
+.general a.back {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.general a.back img { 
+    min-width: 70px;
+    min-height: 70px; 
+}
+
