@@ -25,6 +25,7 @@ button {
 }
 
 .menuTop button {
+  font-family: "cordelFont";
   float: right;
   margin-top: 0%;
 }
@@ -152,19 +153,8 @@ textarea {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   padding-left: 25px;
-  padding-top: 25px;
-  #overflow-y: scroll;
-  height: 300px;
-}
-
-/**************** Menu Bottom ***********/
-.menuXilogravuras {
-  background-image: url("../../images/moldura_xilogravura.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  padding-left: 25px;
-  padding-top: 25px;
-  #overflow-y: scroll;
+  padding-top: 14px;
+  #overflow-y : scroll;
   height: 250px;
 }
 
@@ -223,4 +213,16 @@ textarea {
   background-image: url("../../images/man-help-guide2.png");
   background-repeat: no-repeat;
   height: 320px;
+}
+
+.arrow {
+  cursor: pointer;
+  width: 16%;
+  margin-left: 2%;
+}
+
+.arrow-right {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari 3-8 */
+  transform: rotate(180deg);
 }
