@@ -9,6 +9,20 @@
     flex-direction: column;
 }
 
+p {
+    font-family: "cordelEncantado";
+}
+
+.BoxCordelExample {
+    position: absolute;
+    overflow:scroll;
+    width:400px; 
+    height:400px;
+    padding: 30px;
+    top: 20%;
+    left: 57%;
+}
+
 .exampletitle {
     position: absolute;
     margin-top: 5%;

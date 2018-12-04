@@ -12,8 +12,7 @@ class CharacterPresentation extends Component {
 
   render() {
     return (
-      <div className="presentation">
-	     
+    <div className="presentation"> 
       	<div className="general">
       		<a className="next" href="/novo" title="Novo" >
 		    		<img src={btnAvancar} alt="Novo" className="btn" />
@@ -23,12 +22,8 @@ class CharacterPresentation extends Component {
 		    		<img src={bntVoltar} alt="back" className="btn" />
 		 	</a>
 
-		</div>	
-
-	     
-	      		
-		
-      </div>
+		</div>
+	</div>
 
     )
   }
