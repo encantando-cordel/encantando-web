@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import "./Editor.css";
 
-import jsPDF from "jspdf";
-
 import PeopleRight from "../../images/peopleRight.png";
 import PeopleLeft from "../../images/peopleLeft.png";
 import Star from "../../images/star.png";
