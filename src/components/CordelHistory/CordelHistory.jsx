@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './CordelHistory.css';
-
 import Box from '../../images/frame.png';
 import Fish from '../../images/fish.gif';
 import SeaWeed from '../../images/seaweed.png';
