@@ -33,17 +33,10 @@ class App extends Component {
             <Route path = "/apresentacao" exact component = { CharacterPresentation }/>
             <Route path = "/sextilha-info" exact component={SextilhaInfo}/>
             <Route path = "/sextilhaExample" exact component={sextilhaExample}/>
-
             <Route path = "/exemplo" exact component={CordelExample} />
             <Route path = "/exemplo2" exact component={CordelExample2} />
             <Route path = "/novo" exact component={Editor}/>
-            
-            
 
-            
-
-            
-            
             <Route path = "/history" exact component = { CordelHistory }/>
             <Route path = "/credits" exact component = {Credits}/>
             <Route path = "/activity" exact component = { ChooseActivity }/>

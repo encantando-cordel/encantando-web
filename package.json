@@ -12,8 +12,10 @@
     "popper.js": "^1.14.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-grid-layout": "^0.16.6",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "2.1.1"
+    "react-scripts": "2.1.1",
+    "react-tooltip": "^3.9.0"
   },
   "scripts": {
     "start": "react-scripts start",
