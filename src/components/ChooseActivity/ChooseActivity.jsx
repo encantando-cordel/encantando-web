@@ -85,7 +85,9 @@ class ChooseActivity extends Component {
           </div>
           <div className="row">
             <div className="col text-center">
-              <button className="btn btn-basic btn-lg" style={{fontFamily: 'cordelFont', marginBottom: '2em', float: 'initial'}}>Sair></button>
+              <Link to='/home' className="btn btn-basic btn-lg" style={{fontFamily: 'cordelFont', marginBottom: '2em', float: 'initial'}}>
+                Sair
+              </Link>
             </div>
           </div>
         </div>
