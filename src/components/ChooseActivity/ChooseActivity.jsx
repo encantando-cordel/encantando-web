@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import ReactTooltip from 'react-tooltip';
 
 import itemView from '../../images/item1.png';
 import itemViewHover from '../../images/item1_hover.png';
@@ -45,13 +46,14 @@ class ChooseActivity extends Component {
         <div className="container">
           <div className="row" style={{backgroundImage: `url(${fioVaral})`, backgroundRepeat: 'no-repeat', backgroundPosition: '50% -100%', backgroundSize: '62em'}}>
             <div className="col" style={{textAlign: 'center'}}>
-              <Link to='/' className="btn-item">
+              <Link to='/exemplo' className="btn-item">
                 <img
                   src={ this.state.imageView }
                   alt=""
                   style={{width: '10em'}}
                   onMouseOver={() => this.handleMouseOver('imageView', itemViewHover)}
                   onMouseOut={() => this.handleMouseOut('imageView', itemView)}
+                  data-tip="Exemplo"
                 />
               </Link>
               <Link to='/novo' className="btn-item">
@@ -61,6 +63,7 @@ class ChooseActivity extends Component {
                   style={{width: '10em'}}
                   onMouseOver={() => this.handleMouseOver('imageCreate', itemCreateHover)}
                   onMouseOut={() => this.handleMouseOut('imageCreate', itemCreate)}
+                  data-tip="Novo"
                 />
               </Link>
               <Link to='/history' className="btn-item">
@@ -70,8 +73,10 @@ class ChooseActivity extends Component {
                   style={{width: '10em'}}
                   onMouseOver={() => this.handleMouseOver('imageHistory', itemHistoryHover)}
                   onMouseOut={() => this.handleMouseOut('imageHistory', itemHistory)}
+                  data-tip="História"
                 />
               </Link>
+              <ReactTooltip place="bottom" type="dark" effect="solid"/>
             </div>
           </div>
           <div className="row">
@@ -79,8 +84,8 @@ class ChooseActivity extends Component {
             <div className="col"><img src={ womanFull } alt="womanFull" style={{width: '4em', float: 'right', marginRight: '2em'}} /></div>
           </div>
           <div className="row">
-            <div className="col" style={{textAlign: 'center'}}>
-              <button className="btn btn-basic btn-lg" style={{fontFamily: 'cordelFont', marginBottom: '2em'}}>Sair></button>
+            <div className="col text-center">
+              <button className="btn btn-basic btn-lg" style={{fontFamily: 'cordelFont', marginBottom: '2em', float: 'initial'}}>Sair></button>
             </div>
           </div>
         </div>
