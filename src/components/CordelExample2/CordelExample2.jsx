@@ -3,9 +3,11 @@ import './CordelExample2.css';
 
 import gato  from '../../images/ogato.png';
 import cordelexample  from '../../images/CordelExample.png';
-import botaoavancar  from '../../images/botaoavancar.png';
-import botaovoltar  from '../../images/botaovoltar0.png';
 import selo  from '../../images/frame.png';
+
+import bntVoltar from "../../images/botaovoltar0.png";
+
+import ProgressButton from "../../images/progress-button.png";
 
 export default class CordelExample2 extends Component {
 
@@ -77,15 +79,22 @@ export default class CordelExample2 extends Component {
                 <div className = "gato">
                     <img id ="gato" src= { gato } />
                 </div>
-                <div className = "button1">
-                    <h2 onClick = {() => this.props.history.push('/exemplo')}>Voltar</h2>
-                </div>
+            
                 <div className = "selo">
                     <img id ="selo" src= { selo } />
                 </div>
-                <div className = "button2">
-                    <h2 onClick = {() => this.props.history.push('/home')}>Iniciar</h2>
-                </div>
+                <img
+					id="progressButton" className="button1"
+					onClick={() => this.props.history.push("/activity")}
+					src={ProgressButton}
+					alt=""
+				/>
+				<img
+					id="bntVoltar" className="button2"
+					onClick={() => this.props.history.push("/exemplo")}
+					src={bntVoltar}
+					alt=""
+				/>
             </div>
         )
     }

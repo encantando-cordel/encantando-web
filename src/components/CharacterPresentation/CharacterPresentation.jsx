@@ -12,15 +12,15 @@ class CharacterPresentation extends Component {
   render() {
     return (
     <div className="presentation"> 
-      	<div className="general">
-      		<a className="next" href="/novo" title="Novo" >
-		    	  <img src={btnAvancar} alt="Novo" className="btn" />
-		 	</a>	
-      		<a className="back" href="/character" title="back" >
-		    	  <img src={bntVoltar} alt="back" className="btn" />
-		 	</a>
-         </div>	
-	</div>
+			<div className="general">
+				<a className="next" href="/activity" title="activity" >
+					<img src={btnAvancar} alt="activity" className="btn" />
+				</a>	
+				<a className="back" href="/Activity" title="back" >
+					<img src={bntVoltar} alt="back" className="btn" />
+				</a>
+				</div>	
+		</div>
     )
   }
 }

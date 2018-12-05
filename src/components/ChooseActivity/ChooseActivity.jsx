@@ -56,7 +56,7 @@ class ChooseActivity extends Component {
                   data-tip="Exemplo"
                 />
               </Link>
-              <Link to='/novo' className="btn-item">
+              <Link to='/sextilha-info' className="btn-item">
                 <img
                   src={ this.state.imageCreate }
                   alt=""
