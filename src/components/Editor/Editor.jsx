@@ -216,18 +216,24 @@ export default class Editor extends Component {
   saveCordel() {
     let cordelTitle = document.getElementById("title").value;
     let cordelText = document.getElementById("cordel").value;
-    var doc = new jsPDF();
+    var doc = new jsPDF({
+      orientation: 'landscape'
+    });
     doc.setFontSize(25);
     doc.text(20, 20, cordelTitle);
     doc.setFontSize(14);
-    doc.text(20, 30, cordelText);
+    doc.text(160, 20, cordelText);
+    this.state.itemsOn.map((itemOn, index) => {
+      const Y = (index + (60 * index) + 40);
+      doc.addImage(itemOn.url, 'PNG', 50, Y, 50, 50);
+    })
     doc.save(`${cordelTitle}.pdf`);
   }
 
   validateCordel() {
     var cordelTitle = document.getElementById("title").value;
     var cordelText = document.getElementById("cordel").value;
-    let divXilogravuras = document.querySelector("react-grid-layout");
+    const divXilogravuras = document.querySelector(".react-grid-layout");
 
     var isCordelTitleValidated = this.validateCordelTitle(cordelTitle);
     var isCordelTextValidated = this.validateCordelText(cordelText);
