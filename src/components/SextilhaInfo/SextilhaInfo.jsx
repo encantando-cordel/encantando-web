@@ -11,7 +11,7 @@ export default class SextilhaInfo extends Component {
     	return (
 	<div className = "mainSextInfo">
             	<div className="generalToSext">
-      			<a className="nextToSext" href="/sextilhaExample" title="sextilhaExample" >
+      			<a className="nextToSext" href="/novo" title="sextilhaExample" >
 		    		<img src={btnAvancarSext} alt="sextilhaExample" className="btn" />
 		 	</a>	
       			<a className="backToSext" href="/activity" title="back" >

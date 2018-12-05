@@ -142,7 +142,7 @@ export default class ExplainSexti extends Component {
 				</div>
 				<img
 					id="progressButton" className="button1"
-					onClick={() => this.props.history.push("/novo")}
+					onClick={() => this.props.history.push("/activity")}
 					src={ProgressButton}
 					alt=""
 				/>

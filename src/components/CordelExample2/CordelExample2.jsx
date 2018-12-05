@@ -85,7 +85,7 @@ export default class CordelExample2 extends Component {
                 </div>
                 <img
 					id="progressButton" className="button1"
-					onClick={() => this.props.history.push("/activity")}
+					onClick={() => this.props.history.push("/sextilhaExample")}
 					src={ProgressButton}
 					alt=""
 				/>
