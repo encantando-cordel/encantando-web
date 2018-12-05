@@ -1,18 +1,18 @@
 import React, { Component } from "react";
 import "./Editor.css";
 
-import jsPDF from 'jspdf';
-
 import PeopleRight from "../../images/peopleRight.png";
 import PeopleLeft from "../../images/peopleLeft.png";
 import Star from "../../images/star.png";
 import Fish from "../../images/fish.gif";
 import Livro from "../../images/book.png";
 
-import btnVoltar from "../../images/btt_voltar.png";
-import btnExemplos from "../../images/btt_exemplos.png";
+import btnVoltar from "../../images/progress-button.png";
+import btnExemplos from "../../images/progress-button.png";
 import btnAjuda from "../../images/progress-button.png";
-import btnConcluir from "../../images/btt_concluir1.png";
+import btnConcluir from "../../images/botao_concluir_editor.png";
+
+import jsPDF from "jspdf";
 
 export default class Editor extends Component {
   constructor(props) {
@@ -38,6 +38,40 @@ export default class Editor extends Component {
     this.validateCordelWoodCut = this.validateCordelWoodCut.bind(this); //To-do
     this.validateCordel = this.validateCordel.bind(this);
     this.saveCordel = this.saveCordel.bind(this);
+  }
+
+  componentDidMount() {
+    if (localStorage.getItem("character") == "Erivaldo") {
+      var validation_modal = document.getElementById("validation-modal");
+      validation_modal.classList.add("help-character-validation-man");
+
+      var general = document.getElementById("general");
+      general.classList.add("help-character-guide-man");
+
+      var teste = document.getElementById("teste");
+      teste.classList.add("help-character-guide-man");
+
+      var verses = document.getElementById("verses");
+      verses.classList.add("help-character-guide-man2");
+
+      var woodcut = document.getElementById("woodcut");
+      woodcut.classList.add("help-character-guide-man");
+    } else {
+      var validation_modal = document.getElementById("validation-modal");
+      validation_modal.classList.add("help-character-validation-woman");
+
+      var general = document.getElementById("general");
+      general.classList.add("help-character-guide-woman");
+
+      var teste = document.getElementById("teste");
+      teste.classList.add("help-character-guide-woman");
+
+      var verses = document.getElementById("verses");
+      verses.classList.add("help-character-guide-woman2");
+
+      var woodcut = document.getElementById("woodcut");
+      woodcut.classList.add("help-character-guide-woman");
+    }
   }
 
   bkBranco() {
@@ -130,13 +164,12 @@ export default class Editor extends Component {
   saveCordel() {
     let cordelTitle = document.getElementById("title").value;
     let cordelText = document.getElementById("cordel").value;
-    var doc = new jsPDF()
+    var doc = new jsPDF();
     doc.setFontSize(25);
     doc.text(20, 20, cordelTitle);
     doc.setFontSize(14);
     doc.text(20, 30, cordelText);
     doc.save(`${cordelTitle}.pdf`);
-    console.log("saveCordel was called"); // To-do
   }
 
   validateCordel() {
@@ -197,17 +230,18 @@ export default class Editor extends Component {
               </table>
             </div>
           </div>
+          <h2>CRIANDO SEU CORDEL</h2>
 
-          <h2>CRIANDO SEU CORDEL
-			  {/* Botão Ajuda (Ativador do modal de ajuda */}
-			  <button
-				type="button"
-				className="btnAjuda"
-				data-toggle="modal"
-				data-target="#exampleModalCenter2"
-				title="Ajuda"
-			  >?<br/>Ajuda</button>
-		  </h2>
+          {/* Botão Ajuda (Ativador do modal de ajuda */}
+          <button
+            type="button"
+            className="btnAjuda"
+            data-toggle="modal"
+            data-target="#exampleModalCenter2"
+            title="Ajuda"
+          >
+            <img src={btnAjuda} alt="Ajuda" />
+          </button>
         </div>
 
         {/* Tela Principal */}
@@ -250,7 +284,7 @@ export default class Editor extends Component {
               {/* Area para digita os veros */}
               <div className="editorTexto">
                 <textarea
-                  rows="5"
+                  rows="10"
                   cols="50"
                   placeholder="	Digite aqui o VERSOS de seu cordel!"
                   id="cordel"
@@ -313,7 +347,9 @@ export default class Editor extends Component {
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
-              <div class="modal-body">{this.state.modalTextMessage}</div>
+              <div id="validation-modal" class="modal-body">
+                {this.state.modalTextMessage}
+              </div>
               <div class="modal-footer">
                 <button
                   type="button"
@@ -417,13 +453,14 @@ export default class Editor extends Component {
                 </ul>
                 <div class="tab-content mt-3" id="myTabContent">
                   <div
-                    class="tab-pane fade show active"
+                    class="tab-pane fade show active test"
                     id="general"
                     role="tabpanel"
                     aria-labelledby="general-tab"
                   >
+                    {"                                                     "}
                     Este guia foi feito para lhe ajudar a criar o seu próprio
-                    cordel. Escolhe dentre as abas acima para saber como
+                    cordel. Escolha dentre as abas acima para saber como
                     realizar cada etapa da criação do cordel.
                   </div>
                   <div

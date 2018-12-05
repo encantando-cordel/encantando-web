@@ -5,175 +5,222 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1{
-	text-align: center;
+h1 {
+  text-align: center;
 }
 
 /************ Menu Top ***********/
-.menuTop{	
-	padding-top: 8%;
-	padding-right: 8%;
-	padding-left: 7%;
+
+.menuTop {
+  padding-top: 8%;
+  padding-right: 8%;
+  padding-left: 7%;
 }
 
-
-button{
-	  background: transparent;
-    color: black;
-    outline: none;
-    border: 0 none;
+button {
+  background: transparent;
+  color: black;
+  outline: none;
+  border: 0 none;
 }
 
-.menuTop button{
-	float: right;
-	margin-top: 0%;
+.menuTop button {
+  float: right;
+  margin-top: 0%;
 }
 
-.menuTop div{
-	float: left;
+.menuTop div {
+  float: left;
 }
 
-.menuBackground{
-	background-image: url("../../images/moldura_cores.png");
-	background-size: 100% 100%;
-	height: 100%;
-	width: 100%;
-	background-repeat: no-repeat;
-	padding-top: 20px;
-	padding-bottom: 20px;
+.menuBackground {
+  background-image: url("../../images/moldura_cores.png");
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-th{
-	text-align: center;
+th {
+  text-align: center;
 }
 
-table{
-	width: 60%;
-	margin-left: 20%;
-	border: 1px solid;
+table {
+  width: 60%;
+  margin-left: 20%;
+  border: 1px solid;
 }
 
-.bkbranco{
-	text-align: center;
-	background-color: #ffffff;
-	width: 25px;
-	height: 25px;
+.bkbranco {
+  text-align: center;
+  background-color: #ffffff;
+  width: 25px;
+  height: 25px;
 }
 
-.bkamarelo{
-	text-align: center;
-	background-color: #fff899;
-	color: #ffffff;
-	width: 25px;
-	height: 25px;
+.bkamarelo {
+  text-align: center;
+  background-color: #fff899;
+  color: #ffffff;
+  width: 25px;
+  height: 25px;
 }
 
-.bkmarron{
-	text-align: center;
-	background-color: #c69c6d;
-	color: #ffffff;
-	width: 25px;
-	height: 25px;
+.bkmarron {
+  text-align: center;
+  background-color: #c69c6d;
+  color: #ffffff;
+  width: 25px;
+  height: 25px;
 }
 
-.bkrosa{
-	text-align: center;
-	background-color: #f79779;
-	color: #ffffff;
-	width: 25px;
-	height: 25px;
+.bkrosa {
+  text-align: center;
+  background-color: #f79779;
+  color: #ffffff;
+  width: 25px;
+  height: 25px;
 }
 
 /************ Editor ***************/
 .menuLeft {
-    float: left;
-    width: 30%;
-    height: 100%;  
-	  padding-left: 7%;
-	  padding-right: 1%;
+  float: left;
+  width: 30%;
+  height: 100%;
+  padding-left: 7%;
+  padding-right: 1%;
 }
 
-.areaEditor{	 
-    float: left;
-    width: 60%;
-    height: 80%;
-    padding-left: 2%;
+.areaEditor {
+  float: left;
+  width: 60%;
+  height: 80%;
+  padding-left: 2%;
 }
 
 /******* Titulo ******/
-input{
-	  background: transparent;
-    color: black;
-    outline: none;
-    border: 0 none;
-    resize: none;
-	  padding-left: 20%;
-	  padding-top: 5%;
+input {
+  background: transparent;
+  color: black;
+  outline: none;
+  border: 0 none;
+  resize: none;
+  padding-left: 20%;
+  padding-top: 5%;
 }
 
 /****** Versos ******/
 textarea {
-    background: transparent;
-    color: black;
-    outline: none;
-    border: 0 none;
-    resize: none;
-    width: 39%;
-    height: 250px;
-    font-size: 20px;
-	margin-left: 52%;
+  background: transparent;
+  color: black;
+  outline: none;
+  border: 0 none;
+  resize: none;
+  width: 39%;
+  height: 250px;
+  font-size: 20px;
+  margin-left: 52%;
 }
 
 .editor:after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
-.editor{
-	width: 100%;
+.editor {
+  width: 100%;
 }
 
 @media screen and (max-width: 600px) {
-    .menuLeft {
-        width: 100%;
-    }
+  .menuLeft {
+    width: 100%;
+  }
 }
 
-.background{
-	background-image: url("../../images/bookEditor.png");
-	background-size: 100% 100%;
-	height: 100%;
-	background-repeat: no-repeat;	
+.background {
+  background-image: url("../../images/bookEditor.png");
+  background-size: 100% 100%;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
-.menuXilogravuras{
-	background-image: url("../../images/moldura_xilogravura.png");
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	padding-left: 25px;
-	padding-top: 25px;
-	#overflow-y : scroll;
-	height: 250px;
+.menuXilogravuras {
+  background-image: url("../../images/moldura_xilogravura.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  padding-top: 25px;
+  #overflow-y: scroll;
+  height: 300px;
 }
 
 /**************** Menu Bottom ***********/
-.menuBottom{
-	padding-top: 1%;
-	padding-left: 6%;
-	padding-right: 3%;
-	height: 100px;
+.menuXilogravuras {
+  background-image: url("../../images/moldura_xilogravura.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding-left: 25px;
+  padding-top: 25px;
+  #overflow-y: scroll;
+  height: 250px;
+}
+
+/**************** Menu Bottom ***********/
+.menuBottom {
+  padding-top: 1%;
+  padding-left: 6%;
+  padding-right: 3%;
+  height: 100px;
 }
 
 .btn {
   float: left;
 }
 
-.btnAjudar{
+.btnAjudar {
   float: right;
 }
 
-.btnConcluir{
+.btnConcluir {
   float: right;
   padding-top: 0%;
+}
+
+.help-character-validation-woman {
+  background-image: url("../../images/woman-help.png");
+  background-repeat: no-repeat;
+  height: 270px;
+}
+
+.help-character-validation-man {
+  background-image: url("../../images/man-help.png");
+  background-repeat: no-repeat;
+  height: 270px;
+}
+
+.help-character-guide-woman {
+  background-image: url("../../images/woman-help-guide1.png");
+  background-repeat: no-repeat;
+  height: 270px;
+}
+
+.help-character-guide-man {
+  background-image: url("../../images/man-help-guide1.png");
+  background-repeat: no-repeat;
+  height: 270px;
+}
+
+.help-character-guide-woman2 {
+  background-image: url("../../images/woman-help-guide2.png");
+  background-repeat: no-repeat;
+  height: 320px;
+}
+
+.help-character-guide-man2 {
+  background-image: url("../../images/man-help-guide2.png");
+  background-repeat: no-repeat;
+  height: 320px;
 }
