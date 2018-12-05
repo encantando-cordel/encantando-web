@@ -3,6 +3,17 @@
     margin-top: 6%;
 }
 
+.hBox {
+    position: absolute;
+    overflow:scroll;
+    overflow-x: hidden;
+    padding: 20px;
+    width:395px; 
+    height:380px;
+    top: 31%;
+    left: 15.5%;
+}
+
 .history-box > h1 {
     text-align: initial;
 }
@@ -28,7 +39,6 @@
 .arrow-buttons-container > img {
     /* margin-right: 10%; */
 }
-
 
 #inverse-arrow {
     transform: scaleX(-1);
@@ -195,6 +205,7 @@
         width: 55%;
     }
 } 
+
 
 
 @media only screen and (min-width: 1200px) {
