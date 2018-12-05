@@ -26,8 +26,10 @@ import imagem1 from "../../images/pessoas/imagem1.png";
 import imagem2 from "../../images/pessoas/imagem2.png";
 import personagens from "../../images/pessoas/personagens.png";
 
+import btnAjuda from "../../images/interrogação.png";
 import btnVoltar from "../../images/btt_voltar.png";
 import btnExemplos from "../../images/btt_exemplos.png";
+import btnMenu from "../../images/btt_menu.png";
 import btnConcluir from "../../images/btt_concluir1.png";
 import btnArrow from "../../images/arrow-button.png";
 
@@ -356,7 +358,7 @@ export default class Editor extends Component {
           {/* Menu para selecionar as cores de background*/}
 
           <div>
-            <h2>COR DO FUNDO</h2>
+            <h2>COR DA CAPA</h2>
             {/* Tabela com as cores de background */}
             <div className="menuBackground">
               <table>
@@ -380,8 +382,7 @@ export default class Editor extends Component {
             data-toggle="modal"
             data-target="#exampleModalCenter2"
             title="Ajuda"
-          >
-            ?<br/>Ajuda
+          ><img id = "ajuda"src={btnAjuda} alt="Ajuda" title="Ajuda" />
           </button>
         </div>
 
@@ -422,14 +423,13 @@ export default class Editor extends Component {
                   placeholder="Digite aqui o TÍTULO"
                   id="title"
                 />
-                <br />
               </div>
 
               {/* | editorXilogravuras | Area para coloca as xilogravuras */}
               <ResponsiveReactGridLayout
                 onLayoutChange={this.onLayoutChange}
                 onBreakpointChange={this.onBreakpointChange}
-                style={{width: '42%', height: '400px', marginLeft: '50px'}}
+                style={{width: '50%', height: '250px', marginLeft: '50px'}}
                 {...this.props}
               >
                 {_.map(this.state.itemsOn, el => this.createElement(el))}
@@ -451,13 +451,18 @@ export default class Editor extends Component {
         {/* Menu inferior */}
         <div className="menuBottom">
           {/* Botão Voltar */}
-          <a href="/home" title="Voltar">
+          <a href="/sextilha-info" title="Voltar">
             <img src={btnVoltar} alt="Voltar" className="btn" />
           </a>
 
           {/* Botão Exemplos */}
-          <a href="/exemplos" title="Exemplos">
+          <a href="/sextilhaExample" title="Exemplos">
             <img src={btnExemplos} alt="Exemplos" className="btn" />
+          </a>
+		  
+		  {/* Botão Menu */}
+		  <a href="/activity" title="Menu">
+            <img src={btnMenu} alt="Menu" className="btn" />
           </a>
 
           {/* Botão Concluir */}
@@ -623,8 +628,7 @@ export default class Editor extends Component {
                     role="tabpanel"
                     aria-labelledby="teste-tab"
                   >
-                    O seu cordel deve possuir um titulo. Não se esqueça dar um
-                    nome ao seu cordel no editor.
+                    Digite um título para introduzir a ideia do seu cordel na região do título do cordel no livreto.
                   </div>
                   <div
                     className="tab-pane fade"
@@ -646,9 +650,7 @@ export default class Editor extends Component {
                     role="tabpanel"
                     aria-labelledby="woodcut-tab"
                   >
-                    Um cordel é mais bonito com desenhos! Clique nas figuras do
-                    lado esquerdo do editor para adicionar um desenho ao seu
-                    cordel!
+                    Escolha alguns carimbos na sua direita, clique no carimbo e depois no lado direito do livreto para criar seu cenário.
                   </div>
                 </div>
               </div>

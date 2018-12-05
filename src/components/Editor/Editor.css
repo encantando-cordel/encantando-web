@@ -94,22 +94,35 @@ table {
   padding-right: 1%;
 }
 
+.editorTexto{
+	 #border: 1px solid;
+	 margin-top: -35%; /* gambiarra */
+}
+
 .areaEditor {
   float: left;
   width: 60%;
-  height: 80%;
+  height: 100%;
   padding-left: 2%;
+  
+  #border: 1px solid;
 }
 
 /******* Titulo ******/
-input {
+.editorTitulo{
+	margin-top: 0%;
+}
+
+input{
   background: transparent;
   color: black;
   outline: none;
   border: 0 none;
   resize: none;
   padding-left: 20%;
-  padding-top: 5%;
+  margin-top: -20%; 
+  #padding-top: 0%;
+  #border: 1px solid;
 }
 
 /****** Versos ******/
@@ -123,8 +136,14 @@ textarea {
   height: 250px;
   font-size: 20px;
   margin-left: 52%;
+  #border: 1px solid;
 }
 
+#verses { 
+  padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
 .editor:after {
   content: "";
   display: table;
@@ -173,7 +192,9 @@ textarea {
 .btnAjudar {
   float: right;
 }
-
+#ajuda {
+  width: 66px;
+}
 .btnConcluir {
   float: right;
   padding-top: 0%;
@@ -195,6 +216,9 @@ textarea {
   background-image: url("../../images/woman-help-guide1.png");
   background-repeat: no-repeat;
   height: 270px;
+  padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
 }
 
 .help-character-guide-man {
