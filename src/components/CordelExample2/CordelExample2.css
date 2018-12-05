@@ -9,6 +9,20 @@
     flex-direction: column;
 }
 
+p {
+    font-family: "cordelEncantado";
+}
+
+.BoxCordelExample2 {
+    position: absolute;
+    overflow:scroll;
+    width:400px; 
+    height:400px;
+    padding: 30px;
+    top: 20%;
+    left: 57%;
+}
+
 .exampletitle {
     position: absolute;
     margin-top: 5%;
@@ -41,8 +55,8 @@
 }
 
 #selo {
-    height: 72vh;
+    height: 72vh; 
     position: absolute;
     top: 10%;
-    left: 53%;
+    left: 50%;
 }

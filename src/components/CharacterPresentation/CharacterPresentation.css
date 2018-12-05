@@ -8,6 +8,11 @@
     display: flex;
 }
 
+@font-face {
+    font-family: cordelEncantado;
+    src: url(../../fonts/Cordel Encarnado.ttf);
+}
+
 .general {
     display: flex;
     flex-direction: row-reverse;

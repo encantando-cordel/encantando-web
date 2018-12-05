@@ -15,10 +15,11 @@
 .Box {
 	position: absolute;
 	overflow:scroll;
+    padding: 20px;
 	width:400px; 
 	height:400px;
 	top: 20%;
-	left: 50%;
+	left: 55%;
 }
 
 p {
