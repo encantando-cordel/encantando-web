@@ -12,6 +12,8 @@
 	src: url(../../fonts/Cordel Encarnado.ttf);
 }
 
+
+
 .Box {
 	position: absolute;
 	overflow:scroll;
@@ -28,12 +30,19 @@ p {
 
 .button1 {
     position: absolute;
+    cursor: pointer;
     top: 82%;
     right: 78%;
+    width: 200px;
+    height: 62px;
+    
 }
 
 .button2 {
-	position: absolute;
+    position: absolute;
+    cursor: pointer;
+    width: 200px;
+    height: 62px;
     top: 82%;
-    right: 10%;
- }
+    right: 78%;
+ }  

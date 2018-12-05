@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import "./sextilhaExample.css";
 
-import btnAvancarSext from "../../images/botaoavancar.png";
-import bntVoltarSext from "../../images/botaovoltar0.png";
+
+
+import btnAvancar from "../../images/botaoavancar.png";
+import bntVoltar from "../../images/botaovoltar0.png";
+
+import ProgressButton from "../../images/progress-button.png";
+
 
 
 export default class ExplainSexti extends Component {
@@ -135,13 +140,22 @@ export default class ExplainSexti extends Component {
 						<a href="http://www.carlissongaldino.com.br/category/engenho/sextilhas"> link do acerto</a>
 					</p> 
 				</div>
-				<div className = "button1">
-                    			<h2 onClick = {() => this.props.history.push('/home')}>Voltar</h2>
-                		</div>
-                		<div className = "button2">
-                    			<h2 onClick = {() => this.props.history.push('/exemplo2')}>Avancar</h2>
-                		</div>	
+				<img
+					id="progressButton" className="button1"
+					onClick={() => this.props.history.push("/novo")}
+					src={ProgressButton}
+					alt=""
+				/>
+				<img
+					id="bntVoltar" className="button2"
+					onClick={() => this.props.history.push("/sextilha-info")}
+					src={bntVoltar}
+					alt=""
+				/>
+
+
 			</div>
+
     		</div>
         )
     }

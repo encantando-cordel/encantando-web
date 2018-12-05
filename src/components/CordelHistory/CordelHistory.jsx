@@ -3,7 +3,11 @@ import './CordelHistory.css';
 import Box from '../../images/frame.png';
 import Fish from '../../images/fish.gif';
 import SeaWeed from '../../images/seaweed.png';
-import ArrowButton from '../../images/arrow-button.png';
+
+
+import bntVoltar from "../../images/botaovoltar0.png";
+
+import ProgressButton from "../../images/progress-button.png";
 
 export default () => (
     <div className = "main">
@@ -36,10 +40,8 @@ export default () => (
                         </p>
                     </div>
                 </div>
-                <div className = "arrow-buttons-container"> 
-                    <img src = { ArrowButton } alt = ""/>
-                    <img id = "inverse-arrow" src = { ArrowButton } alt = ""/>
-                </div>
+                
+                
             </div>
             <div className = "fish-container">
                 <img src = { Fish } alt = ""/>
