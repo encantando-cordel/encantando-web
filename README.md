@@ -5,6 +5,7 @@ Aplicação criada para a disciplina de software livre
 ## Dependencias
 - Ter o nodejs instalando globalmente
 - Ter o npm instalado globalmente
+- Ter o php7.2-cli instalado globalmente
 
 ## Execute localmente
 
@@ -21,6 +22,6 @@ Entre na pasta do projeto e instale as dependências do projeto digitando:
 E, finalmente rode local ( pode demorar um pouco para abrir a aplicação)
 
 ```
-> npm start
+> php -S localhost:8000
 ```
 
